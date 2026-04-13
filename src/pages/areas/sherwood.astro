@@ -1,0 +1,93 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import ArticleCTA from '../../components/ArticleCTA.astro';
+import RelatedServices from '../../components/RelatedServices.astro';
+import RelatedAreas from '../../components/RelatedAreas.astro';
+
+const SITE = 'https://ltsmobilemechanics.com';
+const city = 'Sherwood';
+const slug = 'sherwood';
+
+const schema = {
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "name": `LT's Mobile Mechanics - ${city}`,
+  "image": `${SITE}/og-image.png`,
+  "description": `Mobile mechanic services in ${city}, Oregon. Professional auto repair, diagnostics, and maintenance delivered to your location. Available 24/7.`,
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "4041 SW Hall Blvd",
+    "addressLocality": "Beaverton",
+    "addressRegion": "OR",
+    "postalCode": "97005",
+    "addressCountry": "US"
+  },
+  "telephone": "+19715340360",
+  "email": "ltsmobilepdx@gmail.com",
+  "url": `${SITE}/areas/${slug}/`,
+  "areaServed": { "@type": "City", "name": `${city}, Oregon` },
+  "openingHoursSpecification": {
+    "@type": "OpeningHoursSpecification",
+    "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],
+    "opens": "00:00",
+    "closes": "23:59"
+  },
+  "priceRange": "$$"
+};
+---
+
+<Layout
+  title={`Mobile Mechanic in ${city}, Oregon | LT's Mobile Mechanics`}
+  description={`Professional mobile mechanic services in ${city}, Oregon. Oil changes, brake repair, diagnostics, and more. We come to you. Call (971) 534-0360.`}
+  keywords={`mobile mechanic ${city}, auto repair ${city} Oregon, mechanic near me ${city}, car repair ${city}`}
+  canonical={`https://ltsmobilemechanics.com/areas/${slug}/`}
+  schema={schema}
+>
+  <main>
+    <section class="article-hero">
+      <div class="container">
+        <h1>Mobile Mechanic in <em>{city}</em>, Oregon</h1>
+        <p class="hero-subtitle">Professional auto repair that comes to you — 24/7.</p>
+      </div>
+    </section>
+
+    <section class="container">
+      <article class="article-body">
+        <div class="article-content fade-up">
+          <p>
+            Sherwood is a charming community that has managed to maintain its small-town character while growing into a thriving residential area. Old Town Sherwood with its historic streets and the modern Sherwood Town Center both reflect the community's commitment to quality and growth. If you need a mobile mechanic in Sherwood, LTs Mobile Mechanics brings professional auto repair directly to your location. We serve Sherwood and the surrounding area with the same dedication and expertise that has made us trusted throughout the Portland metro.
+          </p>
+
+          <p>
+            The proximity to wine country and the scenic agricultural areas around Sherwood give this community a unique identity. Many Sherwood residents enjoy the slower pace while still having easy access to Portland. Vehicle reliability is essential in a community that values both rural character and convenient connectivity. LTs Mobile Mechanics understands Sherwood's needs because we serve this community directly. Whether you're in Old Town, near the Town Center, or in the residential neighborhoods throughout Sherwood, we're here for you.
+          </p>
+
+          <p>
+            Highway 99W runs through Sherwood, and the area has seen steady development in recent years. The Sherwood Town Center has become a gathering place that reflects the community's vitality. But whether you're shopping, working from home, or managing a busy household, your vehicles need professional care. That's where LTs Mobile Mechanics comes in. We handle everything from routine oil changes and spark plug replacements to brake work, battery service, suspension repairs, and comprehensive diagnostics.
+          </p>
+
+          <p>
+            One of the biggest advantages of mobile mechanic service is the convenience it offers. Instead of rearranging your schedule around shop hours, we come to you. You can stay home, work from your office, or attend to other tasks while we service your vehicle. Our mobile mechanics arrive equipped with professional-grade diagnostic equipment and the expertise to handle whatever your vehicle needs. We're not just convenient, we're professional and thorough in every aspect of our work.
+          </p>
+
+          <p>
+            Sherwood residents value quality service and honest dealing, and that's exactly what LTs Mobile Mechanics delivers. We believe in transparent communication about what we find, fair pricing without hidden charges or unnecessary upselling, and workmanship that you can rely on. Tristan Matthew and his team have built their reputation on integrity, and we apply those same standards to every job we do in Sherwood. Your vehicle deserves quality care, and that's what we provide.
+          </p>
+
+          <p>
+            Vehicle emergencies don't respect business hours, which is why LTs Mobile Mechanics operates 24/7. Whether you need help on a weekend, a holiday, or in the middle of the night, we're available. A dead battery before an important drive? Brake issue that needs immediate attention? Emergency roadside situation? Call us anytime, and we'll dispatch a professional mechanic to help you get back on the road safely.
+          </p>
+        </div>
+      </article>
+    </section>
+
+    <ArticleCTA
+      heading={`Need a Mobile Mechanic in ${city}?`}
+      subheading={`Call LT's Mobile Mechanics. We come to you anywhere in ${city} — any time, day or night.`}
+    />
+
+    <RelatedServices heading={`Our Services in ${city}`} />
+
+    <RelatedAreas exclude={slug} />
+  </main>
+</Layout>

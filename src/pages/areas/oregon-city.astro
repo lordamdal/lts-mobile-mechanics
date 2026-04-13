@@ -1,0 +1,93 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import ArticleCTA from '../../components/ArticleCTA.astro';
+import RelatedServices from '../../components/RelatedServices.astro';
+import RelatedAreas from '../../components/RelatedAreas.astro';
+
+const SITE = 'https://ltsmobilemechanics.com';
+const city = 'Oregon City';
+const slug = 'oregon-city';
+
+const schema = {
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "name": `LT's Mobile Mechanics - ${city}`,
+  "image": `${SITE}/og-image.png`,
+  "description": `Mobile mechanic services in ${city}, Oregon. Professional auto repair, diagnostics, and maintenance delivered to your location. Available 24/7.`,
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "4041 SW Hall Blvd",
+    "addressLocality": "Beaverton",
+    "addressRegion": "OR",
+    "postalCode": "97005",
+    "addressCountry": "US"
+  },
+  "telephone": "+19715340360",
+  "email": "ltsmobilepdx@gmail.com",
+  "url": `${SITE}/areas/${slug}/`,
+  "areaServed": { "@type": "City", "name": `${city}, Oregon` },
+  "openingHoursSpecification": {
+    "@type": "OpeningHoursSpecification",
+    "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],
+    "opens": "00:00",
+    "closes": "23:59"
+  },
+  "priceRange": "$$"
+};
+---
+
+<Layout
+  title={`Mobile Mechanic in ${city}, Oregon | LT's Mobile Mechanics`}
+  description={`Professional mobile mechanic services in ${city}, Oregon. Oil changes, brake repair, diagnostics, and more. We come to you. Call (971) 534-0360.`}
+  keywords={`mobile mechanic ${city}, auto repair ${city} Oregon, mechanic near me ${city}, car repair ${city}`}
+  canonical={`https://ltsmobilemechanics.com/areas/${slug}/`}
+  schema={schema}
+>
+  <main>
+    <section class="article-hero">
+      <div class="container">
+        <h1>Mobile Mechanic in <em>{city}</em>, Oregon</h1>
+        <p class="hero-subtitle">Professional auto repair that comes to you — 24/7.</p>
+      </div>
+    </section>
+
+    <section class="container">
+      <article class="article-body">
+        <div class="article-content fade-up">
+          <p>
+            Oregon City has deep roots in Oregon history. As the end of the Oregon Trail and home to the historic Willamette Falls, Oregon City is a community with character and pride. If you need a mobile mechanic in Oregon City, LTs Mobile Mechanics brings professional auto repair to your location. Whether you're in downtown Oregon City, near the McLoughlin Promenade, or throughout the broader Oregon City area, we're here to serve you.
+          </p>
+
+          <p>
+            The area around Clackamas Community College is bustling with activity, and many Oregon City residents work and study throughout the Willamette Valley. Vehicles are essential to daily life here, and having a reliable mechanic you can trust makes all the difference. LTs Mobile Mechanics understands Oregon City's needs because we serve this community directly. We come to you with professional expertise, honest communication, and a commitment to quality work that respects your time and your vehicle.
+          </p>
+
+          <p>
+            Downtown Oregon City has its own character, with its unique hills and the spectacular Willamette Falls view. The McLoughlin Promenade offers a gathering space that reflects the community's commitment to local pride. That same commitment to quality is what drives LTs Mobile Mechanics. We handle every repair with the same care, whether it's a simple oil change, brake work, battery replacement, or comprehensive diagnostics. Our mobile service means you don't have to leave home for most repairs.
+          </p>
+
+          <p>
+            One of the biggest advantages of choosing a mobile mechanic is flexibility. If you need your vehicle serviced, we come to you. That eliminates the hassle of dropping off your car, arranging a ride, and dealing with the usual inconvenience of traditional repair shops. Whether you work nearby or manage multiple vehicles, our mobile service adapts to your life. We're equipped to handle spark plug replacement, suspension work, pre-purchase inspections, and emergency roadside assistance.
+          </p>
+
+          <p>
+            Oregon City is a place where people value history, community, and doing things the right way. That's exactly what LTs Mobile Mechanics brings to every job. We don't rush repairs or compromise on quality. We diagnose problems carefully, explain what we find, and give you honest recommendations. Fair pricing, transparent communication, and professional workmanship aren't just values we claim, they're how we operate every single day.
+          </p>
+
+          <p>
+            Vehicle emergencies don't follow business hours. That's why LTs Mobile Mechanics operates 24/7. Whether it's early morning, middle of the night, or a holiday, if you need help, we're available. Call us anytime at your convenience, and we'll get your vehicle back in working condition with the quality service Oregon City residents deserve.
+          </p>
+        </div>
+      </article>
+    </section>
+
+    <ArticleCTA
+      heading={`Need a Mobile Mechanic in ${city}?`}
+      subheading={`Call LT's Mobile Mechanics. We come to you anywhere in ${city} — any time, day or night.`}
+    />
+
+    <RelatedServices heading={`Our Services in ${city}`} />
+
+    <RelatedAreas exclude={slug} />
+  </main>
+</Layout>

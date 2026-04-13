@@ -1,0 +1,41 @@
+---
+interface Props {
+  exclude?: string;
+  heading?: string;
+}
+const {
+  exclude = '',
+  heading = 'We Also Serve These Areas',
+} = Astro.props;
+
+const allAreas = [
+  { slug: 'beaverton', name: 'Beaverton' },
+  { slug: 'portland', name: 'Portland' },
+  { slug: 'hillsboro', name: 'Hillsboro' },
+  { slug: 'tigard', name: 'Tigard' },
+  { slug: 'lake-oswego', name: 'Lake Oswego' },
+  { slug: 'tualatin', name: 'Tualatin' },
+  { slug: 'aloha', name: 'Aloha' },
+  { slug: 'gresham', name: 'Gresham' },
+  { slug: 'milwaukie', name: 'Milwaukie' },
+  { slug: 'west-linn', name: 'West Linn' },
+  { slug: 'oregon-city', name: 'Oregon City' },
+  { slug: 'clackamas', name: 'Clackamas' },
+  { slug: 'sherwood', name: 'Sherwood' },
+  { slug: 'wilsonville', name: 'Wilsonville' },
+];
+const areas = allAreas.filter(a => a.slug !== exclude);
+---
+
+<section class="section" style="padding:60px 0;background:var(--dark-1);border-top:1px solid var(--border);">
+  <div class="container">
+    <div class="section-header" style="margin-bottom:28px;">
+      <h2 class="section-title" style="font-size:clamp(1.35rem,2.5vw,1.75rem);">{heading}</h2>
+    </div>
+    <div class="area-cities">
+      {areas.map(a => (
+        <a href={`/areas/${a.slug}/`} class="area-tag">{a.name}</a>
+      ))}
+    </div>
+  </div>
+</section>

@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://ltsmobilemechanics.com/sitemap-index.xml

@@ -1,0 +1,252 @@
+---
+interface Props {
+  title: string;
+  description: string;
+  keywords?: string;
+  canonical?: string;
+  ogImage?: string;
+  ogType?: string;
+  schema?: object;
+}
+
+const SITE = 'https://ltsmobilemechanics.com';
+const {
+  title,
+  description,
+  keywords = '',
+  canonical,
+  ogImage = `${SITE}/og-image.svg`,
+  ogType = 'website',
+  schema,
+} = Astro.props;
+
+const pathname = Astro.url.pathname;
+const canonicalUrl = canonical || `${SITE}${pathname}`;
+const currentYear = new Date().getFullYear();
+---
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#E8A317">
+  <meta name="color-scheme" content="dark">
+
+  <title>{title}</title>
+  <meta name="description" content={description}>
+  {keywords && <meta name="keywords" content={keywords}>}
+  <meta name="robots" content="index, follow, max-image-preview:large">
+  <meta name="googlebot" content="index, follow">
+  <meta name="geo.region" content="US-OR">
+  <meta name="geo.placename" content="Beaverton, Portland">
+  <meta name="geo.position" content="45.487;-122.804">
+  <meta name="ICBM" content="45.487, -122.804">
+  <meta name="author" content="LT's Mobile Mechanics">
+  <meta name="format-detection" content="telephone=yes">
+  <link rel="canonical" href={canonicalUrl}>
+
+  <!-- Open Graph -->
+  <meta property="og:title" content={title}>
+  <meta property="og:description" content={description}>
+  <meta property="og:type" content={ogType}>
+  <meta property="og:url" content={canonicalUrl}>
+  <meta property="og:image" content={ogImage}>
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:locale" content="en_US">
+  <meta property="og:site_name" content="LT's Mobile Mechanics">
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content={title}>
+  <meta name="twitter:description" content={description}>
+  <meta name="twitter:image" content={ogImage}>
+
+  <!-- Favicons -->
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <link rel="icon" type="image/x-icon" href="/favicon.ico">
+  <link rel="apple-touch-icon" href="/favicon.svg">
+
+  <!-- Performance: preconnect fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap">
+
+  {schema && <script type="application/ld+json" set:html={JSON.stringify(schema)} />}
+
+  <style>
+    @import '../styles/global.css';
+  </style>
+</head>
+
+<body>
+  <h1 class="sr-only">LT's Mobile Mechanics — Mobile Auto Repair in Beaverton and Portland, Oregon</h1>
+
+  <!-- Emergency Bar -->
+  <div class="emergency-bar">
+    Roadside emergency? We're available 24/7 &mdash; <a href="tel:+19715340360">Call (971) 534-0360</a>
+  </div>
+
+  <!-- Header -->
+  <header class="header">
+    <div class="header-inner">
+      <a href="/" class="logo" aria-label="LT's Mobile Mechanics home">
+        <div class="logo-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>
+        </div>
+        <div class="logo-text">
+          <span class="logo-name">LT's <span>Mobile</span></span>
+          <span class="logo-sub">Mechanics</span>
+        </div>
+      </a>
+
+      <nav class="nav" aria-label="Primary">
+        <div class="nav-dropdown">
+          <a href="/#services" class="nav-dropdown-trigger">
+            Services
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true" style="width:14px;height:14px"><polyline points="6 9 12 15 18 9"/></svg>
+          </a>
+          <div class="nav-dropdown-menu">
+            <a href="/services/oil-change/">Oil & Fluid Services</a>
+            <a href="/services/brake-repair/">Brake Pads & Rotors</a>
+            <a href="/services/diagnostics/">Diagnostics</a>
+            <a href="/services/spark-plugs-ignition/">Spark Plugs & Ignition</a>
+            <a href="/services/battery-alternator/">Battery & Alternator</a>
+            <a href="/services/suspension-steering/">Suspension & Steering</a>
+            <a href="/services/pre-purchase-inspection/">Pre-Purchase Inspection</a>
+            <a href="/services/emergency-roadside/">Emergency Roadside</a>
+          </div>
+        </div>
+        <a href="/#about">About</a>
+        <a href="/#reviews">Reviews</a>
+        <a href="/#area">Service Area</a>
+        <a href="/#contact">Contact</a>
+      </nav>
+
+      <div class="header-cta">
+        <a href="tel:+19715340360" class="header-phone">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          (971) 534-0360
+        </a>
+        <a href="/#contact" class="btn btn-gold" style="padding:10px 18px;font-size:14px;">Get a Quote</a>
+      </div>
+
+      <button class="mobile-toggle" id="mobileOpen" aria-label="Open menu" aria-expanded="false" aria-controls="mobileMenu">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+      </button>
+    </div>
+  </header>
+
+  <!-- Mobile Menu -->
+  <div class="mobile-menu" id="mobileMenu" role="dialog" aria-modal="true" aria-label="Main menu">
+    <button class="mobile-close" id="mobileClose" aria-label="Close menu">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+    </button>
+    <a href="/">Home</a>
+    <a href="/services/oil-change/">Oil & Fluid Services</a>
+    <a href="/services/brake-repair/">Brake Repair</a>
+    <a href="/services/diagnostics/">Diagnostics</a>
+    <a href="/services/battery-alternator/">Battery & Alternator</a>
+    <a href="/services/emergency-roadside/">Emergency Roadside</a>
+    <a href="/#about">About</a>
+    <a href="/#reviews">Reviews</a>
+    <a href="/#area">Service Area</a>
+    <a href="/#contact">Contact</a>
+    <div class="mobile-menu-cta">
+      <a href="tel:+19715340360" class="btn btn-gold" style="width:100%;">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+        Call (971) 534-0360
+      </a>
+    </div>
+  </div>
+
+  <!-- Page Content -->
+  <slot />
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <a href="/" class="logo" aria-label="LT's Mobile Mechanics home">
+            <div class="logo-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>
+            </div>
+            <div class="logo-text">
+              <span class="logo-name">LT's <span>Mobile</span></span>
+              <span class="logo-sub">Mechanics</span>
+            </div>
+          </a>
+          <p>Honest, professional mobile auto repair for the Portland Metro. We bring the shop to your driveway &mdash; 24 hours a day, 7 days a week.</p>
+        </div>
+        <div class="footer-links">
+          <div class="footer-col">
+            <h4>Services</h4>
+            <a href="/services/oil-change/">Oil Changes</a>
+            <a href="/services/brake-repair/">Brake Repair</a>
+            <a href="/services/diagnostics/">Diagnostics</a>
+            <a href="/services/spark-plugs-ignition/">Spark Plugs</a>
+            <a href="/services/battery-alternator/">Battery & Alternator</a>
+            <a href="/services/suspension-steering/">Suspension</a>
+            <a href="/services/pre-purchase-inspection/">Inspections</a>
+            <a href="/services/emergency-roadside/">Emergency Roadside</a>
+          </div>
+          <div class="footer-col">
+            <h4>Service Areas</h4>
+            <a href="/areas/beaverton/">Beaverton</a>
+            <a href="/areas/portland/">Portland</a>
+            <a href="/areas/hillsboro/">Hillsboro</a>
+            <a href="/areas/tigard/">Tigard</a>
+            <a href="/areas/lake-oswego/">Lake Oswego</a>
+            <a href="/areas/tualatin/">Tualatin</a>
+            <a href="/areas/gresham/">Gresham</a>
+            <a href="/areas/milwaukie/">Milwaukie</a>
+          </div>
+          <div class="footer-col">
+            <h4>Contact</h4>
+            <a href="tel:+19715340360">(971) 534-0360</a>
+            <a href="sms:+19715340360">Text Us</a>
+            <a href="mailto:ltsmobilepdx@gmail.com">Email Us</a>
+            <a href="https://www.facebook.com/p/LTs-Mobile-Mechanics-61582489155322/" target="_blank" rel="noopener">Facebook</a>
+            <a href="https://www.instagram.com/lts_mobile_mechanics/" target="_blank" rel="noopener">Instagram</a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>&copy; {currentYear} LT's Mobile Mechanics. All rights reserved.</span>
+        <span>Beaverton &amp; Portland Metro, Oregon</span>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const openBtn = document.getElementById('mobileOpen');
+    const closeBtn = document.getElementById('mobileClose');
+    const menu = document.getElementById('mobileMenu');
+    openBtn?.addEventListener('click', () => {
+      menu?.classList.add('open');
+      openBtn?.setAttribute('aria-expanded', 'true');
+      document.body.style.overflow = 'hidden';
+    });
+    const close = () => {
+      menu?.classList.remove('open');
+      openBtn?.setAttribute('aria-expanded', 'false');
+      document.body.style.overflow = '';
+    };
+    closeBtn?.addEventListener('click', close);
+    document.querySelectorAll('#mobileMenu a').forEach(a => a.addEventListener('click', close));
+    document.addEventListener('keydown', (e) => { if (e.key === 'Escape') close(); });
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+    document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
+  </script>
+</body>
+</html>

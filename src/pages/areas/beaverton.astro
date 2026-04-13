@@ -1,0 +1,83 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import ArticleCTA from '../../components/ArticleCTA.astro';
+import RelatedServices from '../../components/RelatedServices.astro';
+import RelatedAreas from '../../components/RelatedAreas.astro';
+
+const SITE = 'https://ltsmobilemechanics.com';
+const city = 'Beaverton';
+const slug = 'beaverton';
+
+const schema = {
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "name": `LT's Mobile Mechanics - ${city}`,
+  "image": `${SITE}/og-image.png`,
+  "description": `Mobile mechanic services in ${city}, Oregon. Professional auto repair, diagnostics, and maintenance delivered to your location. Available 24/7.`,
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "4041 SW Hall Blvd",
+    "addressLocality": "Beaverton",
+    "addressRegion": "OR",
+    "postalCode": "97005",
+    "addressCountry": "US"
+  },
+  "telephone": "+19715340360",
+  "email": "ltsmobilepdx@gmail.com",
+  "url": `${SITE}/areas/${slug}/`,
+  "areaServed": { "@type": "City", "name": `${city}, Oregon` },
+  "openingHoursSpecification": {
+    "@type": "OpeningHoursSpecification",
+    "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],
+    "opens": "00:00",
+    "closes": "23:59"
+  },
+  "priceRange": "$$"
+};
+---
+
+<Layout
+  title={`Mobile Mechanic in ${city}, Oregon | LT's Mobile Mechanics`}
+  description={`Professional mobile mechanic services in ${city}, Oregon. Oil changes, brake repair, diagnostics, and more. We come to you. Call (971) 534-0360.`}
+  keywords={`mobile mechanic ${city}, auto repair ${city} Oregon, mechanic near me ${city}, car repair ${city}`}
+  canonical={`https://ltsmobilemechanics.com/areas/${slug}/`}
+  schema={schema}
+>
+  <main>
+    <section class="article-hero">
+      <div class="container">
+        <h1>Mobile Mechanic in <em>{city}</em>, Oregon</h1>
+        <p class="hero-subtitle">Professional auto repair that comes to you — 24/7.</p>
+      </div>
+    </section>
+
+    <section class="container">
+      <article class="article-body">
+        <div class="article-content fade-up">
+          <p>When your car needs attention in Beaverton, you don't have to hunt for a shop or wait in a waiting room. LTs Mobile Mechanics brings full-service auto repair right to your driveway. Whether you're in Cedar Hills, working near Progress Ridge, or parked at home on SW Hall Blvd, we're your trusted local mechanic.</p>
+
+          <p>Beaverton drivers trust LTs Mobile Mechanics for reliable service without the hassle. Our owner Tristan Matthew has spent years building this business on one principle: show up on time, do the job right, and treat your vehicle like it's our own. We handle everything from routine oil changes to complex diagnostics, and we're available 24/7 because car trouble doesn't keep business hours.</p>
+
+          <p>If you're stuck on TV Highway or need brake work near the Beaverton Transit Center, we'll come to you. We service Beaverton's growing communities from Cedar Mills to Fanno Creek, covering neighborhoods where your neighbors trust us. Need a pre-purchase inspection before buying that used truck? Our thorough diagnostic work gives you confidence before you sign papers. Battery dying in the Murray Hill area? We'll get you back on the road fast.</p>
+
+          <p>The Beaverton metro area is packed with professionals and families who need reliable auto care. LTs Mobile Mechanics fits your life. No appointment book that's weeks out. No driving across town to drop off your car. You tell us where you are and when you need us, and we handle it. Our mobile service means less downtime for your vehicle and more peace of mind for you.</p>
+
+          <p>We specialize in the repairs that keep your Beaverton vehicle running strong. Oil changes keep your engine healthy. Spark plug service keeps your fuel economy good. Brake repair keeps your family safe. Suspension and steering work keeps your ride smooth. Battery and alternator replacement keeps you from getting stranded. And if something goes wrong and you need emergency roadside assistance, we're just a phone call away.</p>
+
+          <p>Beaverton sits at the heart of Portland's tech and business corridor. That means working professionals who value their time. We value it too. That's why we show up ready to work, with the right tools and the right attitude. We don't oversell you on repairs you don't need, and we explain what we find so you understand exactly what's happening with your vehicle.</p>
+
+          <p>From Orenco Station to downtown Beaverton, from the neighborhoods around Progress Ridge to the quiet streets of Cedar Hills, LTs Mobile Mechanics is your local answer to car repair. Call us today at (971) 534-0360 for fast, honest service that comes to you.</p>
+        </div>
+      </article>
+    </section>
+
+    <ArticleCTA
+      heading={`Need a Mobile Mechanic in ${city}?`}
+      subheading={`Call LT's Mobile Mechanics. We come to you anywhere in ${city} — any time, day or night.`}
+    />
+
+    <RelatedServices heading={`Our Services in ${city}`} />
+
+    <RelatedAreas exclude={slug} />
+  </main>
+</Layout>

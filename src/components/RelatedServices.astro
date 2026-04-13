@@ -1,0 +1,39 @@
+---
+interface Props {
+  exclude?: string;
+  heading?: string;
+  subheading?: string;
+}
+const {
+  exclude = '',
+  heading = 'Our Mobile Services',
+  subheading = 'LT’s Mobile Mechanics handles the full range of on-site auto repair and maintenance.',
+} = Astro.props;
+
+const allServices = [
+  { slug: 'oil-change', title: 'Oil Change' },
+  { slug: 'brake-repair', title: 'Brake Repair' },
+  { slug: 'diagnostics', title: 'Diagnostics' },
+  { slug: 'spark-plugs-ignition', title: 'Spark Plugs & Ignition' },
+  { slug: 'battery-alternator', title: 'Battery & Alternator' },
+  { slug: 'suspension-steering', title: 'Suspension & Steering' },
+  { slug: 'pre-purchase-inspection', title: 'Pre-Purchase Inspection' },
+  { slug: 'emergency-roadside', title: 'Emergency Roadside' },
+];
+const services = allServices.filter(s => s.slug !== exclude);
+---
+
+<section class="related-section">
+  <div class="container">
+    <h2>{heading}</h2>
+    <p class="section-sub">{subheading}</p>
+    <div class="related-grid">
+      {services.map(s => (
+        <a href={`/services/${s.slug}/`} class="related-card">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>
+          <span>{s.title}</span>
+        </a>
+      ))}
+    </div>
+  </div>
+</section>

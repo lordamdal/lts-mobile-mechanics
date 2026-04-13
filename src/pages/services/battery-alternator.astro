@@ -1,0 +1,82 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import ArticleCTA from '../../components/ArticleCTA.astro';
+import RelatedServices from '../../components/RelatedServices.astro';
+
+const SITE = 'https://ltsmobilemechanics.com';
+const slug = 'battery-alternator';
+const serviceTitle = 'Battery & Alternator';
+
+const schemaData = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "name": `Mobile ${serviceTitle} Service`,
+  "description": `Professional mobile ${serviceTitle.toLowerCase()} service in Beaverton, Portland, and the greater Portland metro area. We come to you — 24/7.`,
+  "provider": {
+    "@type": "LocalBusiness",
+    "name": "LT's Mobile Mechanics",
+    "telephone": "+19715340360",
+    "url": SITE,
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "4041 SW Hall Blvd",
+      "addressLocality": "Beaverton",
+      "addressRegion": "OR",
+      "postalCode": "97005",
+      "addressCountry": "US"
+    }
+  },
+  "areaServed": [
+    "Beaverton, OR","Portland, OR","Hillsboro, OR","Tigard, OR",
+    "Lake Oswego, OR","Tualatin, OR","Aloha, OR","Gresham, OR"
+  ],
+  "url": `${SITE}/services/${slug}/`
+};
+---
+
+<Layout
+  title={`Mobile ${serviceTitle} in Beaverton & Portland, OR | LT's Mobile Mechanics`}
+  description={`Mobile ${serviceTitle.toLowerCase()} service at your home or work in Beaverton, Portland, and the Portland metro. Professional, honest, and available 24/7. Call (971) 534-0360.`}
+  keywords={`mobile ${serviceTitle.toLowerCase()} Portland, mobile mechanic ${serviceTitle.toLowerCase()}, ${serviceTitle.toLowerCase()} Beaverton, ${serviceTitle.toLowerCase()} Portland Oregon`}
+  canonical={`https://ltsmobilemechanics.com/services/${slug}/`}
+  schema={schemaData}
+>
+  <main>
+    <section class="article-hero">
+      <div class="container">
+        <h1>Mobile Battery and Alternator Service in <em>Beaverton and Portland</em></h1>
+        <p class="hero-subtitle">Car won't start? Lights dimming? We test, repair, and replace batteries and alternators at your location. 24/7 service.</p>
+      </div>
+    </section>
+
+    <section class="container">
+      <article class="article-body">
+        <div class="article-content fade-up">
+          <p>Your vehicle's battery provides the power to start your engine and run electrical systems. The alternator charges the battery while the engine is running. When either of these fails, you're stuck. LTs Mobile Mechanics provides battery and alternator service throughout Beaverton, Portland, and the surrounding metro area. Tristan will come to you, test what's wrong, and get you back on the road.</p>
+
+          <h2>Battery Problems and Warning Signs</h2>
+          <p>Car batteries typically last three to five years, but they can fail sooner depending on climate, driving habits, and how often you use the vehicle. If you're having trouble starting your car, especially in cold weather, the battery might be on its way out. Slow cranking is another sign. Sometimes a battery will just die without warning. If you see corrosion around the battery terminals, clean them off, but if the battery itself is bad, it needs to be replaced. Don't wait for a dead battery to strand you on the side of the road in Portland.</p>
+
+          <h2>Alternator Issues</h2>
+          <p>If your battery is being drained even though it's not that old, your alternator might not be charging it properly. Signs of a failing alternator include dimming headlights, dashboard lights flickering, electrical devices not working properly, or that high-pitched whining sound when you turn the wheel. An alternator that's not doing its job will eventually leave you with a dead battery and a stranded vehicle. Get it checked if you suspect a problem.</p>
+
+          <h2>What We Do</h2>
+          <p>When you call LTs Mobile Mechanics with a battery or electrical problem, Tristan will come to your location and test both the battery and alternator. This tells us exactly what's wrong. Is the battery dead or failing? Is the alternator charging properly? Once we know, we can recommend the right fix. Whether it's a new battery, an alternator replacement, or something else, we'll explain it clearly and give you fair pricing.</p>
+
+          <h2>Mobile Service When You Need It</h2>
+          <p>Dead battery at home? Alternator failure at work? Broken down in Beaverton or Portland? No problem. We come to you with the parts and tools needed to fix your battery or alternator issue. If you're stranded, we can often get you back running within the hour. And with 24/7 availability, we're here whenever you need us.</p>
+
+          <h2>Get Power Restored</h2>
+          <p>Don't let battery or alternator problems leave you stranded. Call LTs Mobile Mechanics for fast, professional service. We serve Beaverton, Portland, Tigard, Hillsboro, Lake Oswego, Gresham, and the entire Portland metro area. Available anytime, day or night.</p>
+        </div>
+      </article>
+    </section>
+
+    <ArticleCTA
+      heading={`Ready for ${serviceTitle}?`}
+      subheading={`Call LT's Mobile Mechanics. We come to you in Beaverton, Portland, and throughout the Portland metro — 24/7.`}
+    />
+
+    <RelatedServices exclude={slug} />
+  </main>
+</Layout>

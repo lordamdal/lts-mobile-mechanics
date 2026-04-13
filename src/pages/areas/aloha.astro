@@ -1,0 +1,83 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import ArticleCTA from '../../components/ArticleCTA.astro';
+import RelatedServices from '../../components/RelatedServices.astro';
+import RelatedAreas from '../../components/RelatedAreas.astro';
+
+const SITE = 'https://ltsmobilemechanics.com';
+const city = 'Aloha';
+const slug = 'aloha';
+
+const schema = {
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "name": `LT's Mobile Mechanics - ${city}`,
+  "image": `${SITE}/og-image.png`,
+  "description": `Mobile mechanic services in ${city}, Oregon. Professional auto repair, diagnostics, and maintenance delivered to your location. Available 24/7.`,
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "4041 SW Hall Blvd",
+    "addressLocality": "Beaverton",
+    "addressRegion": "OR",
+    "postalCode": "97005",
+    "addressCountry": "US"
+  },
+  "telephone": "+19715340360",
+  "email": "ltsmobilepdx@gmail.com",
+  "url": `${SITE}/areas/${slug}/`,
+  "areaServed": { "@type": "City", "name": `${city}, Oregon` },
+  "openingHoursSpecification": {
+    "@type": "OpeningHoursSpecification",
+    "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],
+    "opens": "00:00",
+    "closes": "23:59"
+  },
+  "priceRange": "$$"
+};
+---
+
+<Layout
+  title={`Mobile Mechanic in ${city}, Oregon | LT's Mobile Mechanics`}
+  description={`Professional mobile mechanic services in ${city}, Oregon. Oil changes, brake repair, diagnostics, and more. We come to you. Call (971) 534-0360.`}
+  keywords={`mobile mechanic ${city}, auto repair ${city} Oregon, mechanic near me ${city}, car repair ${city}`}
+  canonical={`https://ltsmobilemechanics.com/areas/${slug}/`}
+  schema={schema}
+>
+  <main>
+    <section class="article-hero">
+      <div class="container">
+        <h1>Mobile Mechanic in <em>{city}</em>, Oregon</h1>
+        <p class="hero-subtitle">Professional auto repair that comes to you — 24/7.</p>
+      </div>
+    </section>
+
+    <section class="container">
+      <article class="article-body">
+        <div class="article-content fade-up">
+          <p>Aloha is a community with real heart. It's the kind of place where neighbors know neighbors, where families have roots, where people value community above all else. Whether you're along TV Highway, living in the 185th corridor neighborhoods, or settled in the quiet residential areas that define Aloha, LTs Mobile Mechanics is your local mechanic. We understand Aloha's community values, and we operate with the same integrity and care.</p>
+
+          <p>LTs Mobile Mechanics serves Aloha as part of the extended Portland metro area, but with a special understanding of Aloha's character. Owner Tristan Matthew built this business on community trust and reliable service, values that resonate deeply in Aloha. Your vehicle is important to your family and your life, and we treat it with the respect it deserves. We show up ready to work, ready to listen, and ready to serve Aloha residents with professionalism and expertise.</p>
+
+          <p>Aloha sits in a unique geographic position between Beaverton and Hillsboro, serving as a bridge community with its own distinct identity. TV Highway brings commerce and activity. The 185th corridor supports neighborhoods and local businesses. The residential areas offer peace and community. Through all these parts of Aloha, LTs Mobile Mechanics provides the auto service that keeps vehicles running and keeps communities strong. Oil change at your home? We're there. Brake work before a family trip? Done. Diagnostic mystery that needs solving? We'll figure it out.</p>
+
+          <p>Mobile mechanic service fits Aloha life because it respects time and community values. Instead of disrupting your day with a trip to a distant shop, we come to you. Your driveway or parking lot becomes our workplace. We bring full diagnostic capability and the tools to handle most service on the spot. Spark plug service, battery replacement, alternator work, suspension and steering fixes, brake repair, oil changes. All handled at your location, with professionalism and skill.</p>
+
+          <p>Aloha residents understand the value of honest, straightforward service. We deliver exactly that. We don't oversell repairs you don't need. We explain what we find and give you options. We answer your questions completely. We treat every vehicle like it belongs to someone important to us, because it does. That approach builds trust, and that's why Aloha families call us back again and again.</p>
+
+          <p>The community feel of Aloha means word of mouth matters. Neighbors talk. Friends recommend. We've earned Aloha's trust through years of professional service and genuine care for the vehicles and people we serve. From emergency roadside help to pre-purchase inspections, from routine maintenance to complex diagnostics, LTs Mobile Mechanics has built a reputation for quality in Aloha.</p>
+
+          <p>Oil changes, brake service, spark plug replacement, battery and alternator work, suspension and steering fixes, diagnostic expertise, pre-purchase inspections, and 24/7 emergency roadside assistance. Whatever your Aloha vehicle needs, call LTs Mobile Mechanics at (971) 534-0360. We're here to serve your community with excellence.</p>
+        </div>
+      </article>
+    </section>
+
+    <ArticleCTA
+      heading={`Need a Mobile Mechanic in ${city}?`}
+      subheading={`Call LT's Mobile Mechanics. We come to you anywhere in ${city} — any time, day or night.`}
+    />
+
+    <RelatedServices heading={`Our Services in ${city}`} />
+
+    <RelatedAreas exclude={slug} />
+  </main>
+</Layout>

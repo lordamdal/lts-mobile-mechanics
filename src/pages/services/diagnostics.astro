@@ -1,0 +1,82 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import ArticleCTA from '../../components/ArticleCTA.astro';
+import RelatedServices from '../../components/RelatedServices.astro';
+
+const SITE = 'https://ltsmobilemechanics.com';
+const slug = 'diagnostics';
+const serviceTitle = 'Diagnostics';
+
+const schemaData = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "name": `Mobile ${serviceTitle} Service`,
+  "description": `Professional mobile ${serviceTitle.toLowerCase()} service in Beaverton, Portland, and the greater Portland metro area. We come to you — 24/7.`,
+  "provider": {
+    "@type": "LocalBusiness",
+    "name": "LT's Mobile Mechanics",
+    "telephone": "+19715340360",
+    "url": SITE,
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "4041 SW Hall Blvd",
+      "addressLocality": "Beaverton",
+      "addressRegion": "OR",
+      "postalCode": "97005",
+      "addressCountry": "US"
+    }
+  },
+  "areaServed": [
+    "Beaverton, OR","Portland, OR","Hillsboro, OR","Tigard, OR",
+    "Lake Oswego, OR","Tualatin, OR","Aloha, OR","Gresham, OR"
+  ],
+  "url": `${SITE}/services/${slug}/`
+};
+---
+
+<Layout
+  title={`Mobile ${serviceTitle} in Beaverton & Portland, OR | LT's Mobile Mechanics`}
+  description={`Mobile ${serviceTitle.toLowerCase()} service at your home or work in Beaverton, Portland, and the Portland metro. Professional, honest, and available 24/7. Call (971) 534-0360.`}
+  keywords={`mobile ${serviceTitle.toLowerCase()} Portland, mobile mechanic ${serviceTitle.toLowerCase()}, ${serviceTitle.toLowerCase()} Beaverton, ${serviceTitle.toLowerCase()} Portland Oregon`}
+  canonical={`https://ltsmobilemechanics.com/services/${slug}/`}
+  schema={schemaData}
+>
+  <main>
+    <section class="article-hero">
+      <div class="container">
+        <h1>Mobile Diagnostics in <em>Beaverton and Portland</em></h1>
+        <p class="hero-subtitle">Check engine light on? We'll plug in, read the codes, and tell you what's wrong. Expert computer diagnostics at your location.</p>
+      </div>
+    </section>
+
+    <section class="container">
+      <article class="article-body">
+        <div class="article-content fade-up">
+          <p>That check engine light can mean anything from a loose gas cap to a serious engine problem. The only way to know for sure is to plug in and read the diagnostic codes. LTs Mobile Mechanics offers professional vehicle diagnostics throughout Beaverton, Portland, and the surrounding metro area. Tristan will use advanced diagnostic equipment to figure out what's going on with your vehicle, no guessing required.</p>
+
+          <h2>What Does That Light Mean</h2>
+          <p>Your vehicle's onboard diagnostics system is constantly monitoring the engine, transmission, emissions, and other critical systems. When it detects a problem, the check engine light comes on and the system stores a diagnostic trouble code. That code tells us what the problem is or what system needs attention. Sometimes it's minor, sometimes it's major. Without reading the code, you're just driving blind.</p>
+
+          <h2>Our Diagnostic Process</h2>
+          <p>When you call LTs Mobile Mechanics about your check engine light, Tristan will come to your location in Beaverton, Portland, or anywhere in our service area. He'll connect diagnostic equipment to your vehicle, retrieve the trouble codes, and interpret what they mean. He'll explain the issue in plain language, tell you if it's something that needs immediate attention or if you can wait, and give you honest options and pricing. No pressure, no upselling. Just the truth about your vehicle.</p>
+
+          <h2>Beyond the Check Engine Light</h2>
+          <p>While many people call for check engine light diagnostics, we also handle general vehicle diagnostics. If your car is running rough, getting poor fuel economy, has strange noises, or just doesn't feel right, we can plug in and get to the root cause. Modern vehicles record tons of data, and reading that data is often the fastest way to pinpoint a problem.</p>
+
+          <h2>Mobile Convenience</h2>
+          <p>No need to take your vehicle to a shop in Portland or Beaverton. We come to you with all the diagnostic tools we need. You stay home or at work, and we handle the diagnosis. Once we know what's wrong, you can decide whether to have us fix it, take it somewhere else, or do it yourself. We're here to help, not pressure you into anything.</p>
+
+          <h2>Get Answers Today</h2>
+          <p>Wondering what that check engine light means? Call LTs Mobile Mechanics and get answers. We serve Beaverton, Portland, Tigard, Lake Oswego, Gresham, and the entire Portland metro area. Available 24/7 for diagnostics and repairs.</p>
+        </div>
+      </article>
+    </section>
+
+    <ArticleCTA
+      heading={`Ready for ${serviceTitle}?`}
+      subheading={`Call LT's Mobile Mechanics. We come to you in Beaverton, Portland, and throughout the Portland metro — 24/7.`}
+    />
+
+    <RelatedServices exclude={slug} />
+  </main>
+</Layout>

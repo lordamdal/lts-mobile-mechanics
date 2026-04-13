@@ -1,0 +1,93 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import ArticleCTA from '../../components/ArticleCTA.astro';
+import RelatedServices from '../../components/RelatedServices.astro';
+import RelatedAreas from '../../components/RelatedAreas.astro';
+
+const SITE = 'https://ltsmobilemechanics.com';
+const city = 'Gresham';
+const slug = 'gresham';
+
+const schema = {
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "name": `LT's Mobile Mechanics - ${city}`,
+  "image": `${SITE}/og-image.png`,
+  "description": `Mobile mechanic services in ${city}, Oregon. Professional auto repair, diagnostics, and maintenance delivered to your location. Available 24/7.`,
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "4041 SW Hall Blvd",
+    "addressLocality": "Beaverton",
+    "addressRegion": "OR",
+    "postalCode": "97005",
+    "addressCountry": "US"
+  },
+  "telephone": "+19715340360",
+  "email": "ltsmobilepdx@gmail.com",
+  "url": `${SITE}/areas/${slug}/`,
+  "areaServed": { "@type": "City", "name": `${city}, Oregon` },
+  "openingHoursSpecification": {
+    "@type": "OpeningHoursSpecification",
+    "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],
+    "opens": "00:00",
+    "closes": "23:59"
+  },
+  "priceRange": "$$"
+};
+---
+
+<Layout
+  title={`Mobile Mechanic in ${city}, Oregon | LT's Mobile Mechanics`}
+  description={`Professional mobile mechanic services in ${city}, Oregon. Oil changes, brake repair, diagnostics, and more. We come to you. Call (971) 534-0360.`}
+  keywords={`mobile mechanic ${city}, auto repair ${city} Oregon, mechanic near me ${city}, car repair ${city}`}
+  canonical={`https://ltsmobilemechanics.com/areas/${slug}/`}
+  schema={schema}
+>
+  <main>
+    <section class="article-hero">
+      <div class="container">
+        <h1>Mobile Mechanic in <em>{city}</em>, Oregon</h1>
+        <p class="hero-subtitle">Professional auto repair that comes to you — 24/7.</p>
+      </div>
+    </section>
+
+    <section class="container">
+      <article class="article-body">
+        <div class="article-content fade-up">
+          <p>
+            If you're looking for a reliable mobile mechanic in Gresham, LTs Mobile Mechanics brings professional auto repair right to your location. Whether you're in downtown Gresham, Rockwood, or anywhere else in the area, we come to you at your home or office for convenient, quality service.
+          </p>
+
+          <p>
+            Gresham is a vibrant community just east of Portland, and we know the area well. From the bustling downtown streets to the neighborhoods around Mt. Hood Community College, we're committed to serving Gresham residents with the same dedication and expertise Tristan Matthew has built his reputation on. Our mobile service model means no more waiting in crowded repair shops or dealing with the inconvenience of dropping off your vehicle.
+          </p>
+
+          <p>
+            The Gresham area stretches across Powell Boulevard and extends into Rockwood, where many families and small business owners rely on their vehicles daily. Whether you need a quick oil change before heading to Powell Butte or a comprehensive diagnostic while you work from home, LTs Mobile Mechanics delivers professional service on your schedule. We handle everything from routine maintenance to complex repairs, and we do it right at your doorstep.
+          </p>
+
+          <p>
+            What sets us apart is our commitment to honesty and quality work. We're not just passing through Gresham, we're part of this community. When you call us, you're getting direct access to an experienced mechanic who takes pride in every job. We bring all the tools and expertise needed to handle your repairs properly, whether it's a brake inspection, battery replacement, or suspension work.
+          </p>
+
+          <p>
+            The Gresham Farmers Market, the local parks, and the thriving business community show that Gresham is a place where people value quality service and convenience. That's exactly what LTs Mobile Mechanics provides. We're available around the clock because we understand that vehicle problems don't wait for business hours. Whether you're stuck with a dead battery on a Sunday morning or need to get your vehicle road-ready before a long drive, we've got you covered.
+          </p>
+
+          <p>
+            Choosing LTs Mobile Mechanics means choosing expertise without the hassle. We come to you with full diagnostic equipment, genuine parts knowledge, and the skills to handle whatever your vehicle needs. No appointment stress, no travel time to a shop, just professional auto repair when and where you need it.
+          </p>
+        </div>
+      </article>
+    </section>
+
+    <ArticleCTA
+      heading={`Need a Mobile Mechanic in ${city}?`}
+      subheading={`Call LT's Mobile Mechanics. We come to you anywhere in ${city} — any time, day or night.`}
+    />
+
+    <RelatedServices heading={`Our Services in ${city}`} />
+
+    <RelatedAreas exclude={slug} />
+  </main>
+</Layout>

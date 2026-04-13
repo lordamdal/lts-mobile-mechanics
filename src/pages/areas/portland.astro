@@ -1,0 +1,83 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import ArticleCTA from '../../components/ArticleCTA.astro';
+import RelatedServices from '../../components/RelatedServices.astro';
+import RelatedAreas from '../../components/RelatedAreas.astro';
+
+const SITE = 'https://ltsmobilemechanics.com';
+const city = 'Portland';
+const slug = 'portland';
+
+const schema = {
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "name": `LT's Mobile Mechanics - ${city}`,
+  "image": `${SITE}/og-image.png`,
+  "description": `Mobile mechanic services in ${city}, Oregon. Professional auto repair, diagnostics, and maintenance delivered to your location. Available 24/7.`,
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "4041 SW Hall Blvd",
+    "addressLocality": "Beaverton",
+    "addressRegion": "OR",
+    "postalCode": "97005",
+    "addressCountry": "US"
+  },
+  "telephone": "+19715340360",
+  "email": "ltsmobilepdx@gmail.com",
+  "url": `${SITE}/areas/${slug}/`,
+  "areaServed": { "@type": "City", "name": `${city}, Oregon` },
+  "openingHoursSpecification": {
+    "@type": "OpeningHoursSpecification",
+    "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],
+    "opens": "00:00",
+    "closes": "23:59"
+  },
+  "priceRange": "$$"
+};
+---
+
+<Layout
+  title={`Mobile Mechanic in ${city}, Oregon | LT's Mobile Mechanics`}
+  description={`Professional mobile mechanic services in ${city}, Oregon. Oil changes, brake repair, diagnostics, and more. We come to you. Call (971) 534-0360.`}
+  keywords={`mobile mechanic ${city}, auto repair ${city} Oregon, mechanic near me ${city}, car repair ${city}`}
+  canonical={`https://ltsmobilemechanics.com/areas/${slug}/`}
+  schema={schema}
+>
+  <main>
+    <section class="article-hero">
+      <div class="container">
+        <h1>Mobile Mechanic in <em>{city}</em>, Oregon</h1>
+        <p class="hero-subtitle">Professional auto repair that comes to you — 24/7.</p>
+      </div>
+    </section>
+
+    <section class="container">
+      <article class="article-body">
+        <div class="article-content fade-up">
+          <p>Portland is a city of neighborhoods, each with its own character and rhythm. Whether you're in the Pearl District, parked on Hawthorne near your favorite coffee spot, or working in the Alberta Arts District, LTs Mobile Mechanics is your local mobile mechanic. We come to you anywhere in Portland and serve Southeast, Northeast, Northwest, and Southwest corners of the city.</p>
+
+          <p>Portland drivers get it. Life moves fast, and your car shouldn't slow you down. That's why LTs Mobile Mechanics brings professional auto repair right to your location. No appointment books that stretch weeks out. No driving across the city to some shop in an industrial area. You tell us where you are, and we handle it. Owner Tristan Matthew built this business on a simple promise: honest work, done right, when you need it.</p>
+
+          <p>We service Portland's diverse communities from Alberta to the Pearl, from Hawthorne to Northwest Portland. If you're stuck near Union Station or need brake work in Southeast Portland, we roll out. Diagnostic trouble in the Belmont District? Battery dying in Northeast Portland? Pre-purchase inspection before you buy a used vehicle? We do all of it, and we show up ready to work. Portland professionals trust us because we respect their time and their vehicles.</p>
+
+          <p>Portland is built on independent thinking and quality craftsmanship. That ethos runs through LTs Mobile Mechanics too. We don't oversell repairs. We explain what we find and let you decide what makes sense for your situation. Your spark plugs are worn? We'll tell you, show you, and let you choose. Your suspension is rough and needs attention? We'll detail exactly what's wrong and what the fix looks like.</p>
+
+          <p>The city sprawls across valleys and neighborhoods, which means Portland drivers need a mechanic who understands the landscape. We do. We know the neighborhoods, the traffic patterns, the weather challenges. Portland rain means brakes get tested. Portland's hills and bridges mean suspension sees real work. Your vehicle works hard here, and it deserves expert care. LTs Mobile Mechanics brings that expertise to your driveway.</p>
+
+          <p>Portland's community values show up in how we work. We treat every vehicle like it belongs to someone we know. We show up on time. We text updates. We answer questions. We're not trying to move on to the next job. We're trying to solve your problem and earn your trust. That approach has built our reputation across Portland neighborhoods.</p>
+
+          <p>Oil changes, brake repair, spark plug service, battery replacement, alternator work, suspension and steering fixes, pre-purchase inspections, and emergency roadside help. Whatever your Portland vehicle needs, call LTs Mobile Mechanics at (971) 534-0360. We're available 24/7 because car trouble doesn't wait for business hours.</p>
+        </div>
+      </article>
+    </section>
+
+    <ArticleCTA
+      heading={`Need a Mobile Mechanic in ${city}?`}
+      subheading={`Call LT's Mobile Mechanics. We come to you anywhere in ${city} — any time, day or night.`}
+    />
+
+    <RelatedServices heading={`Our Services in ${city}`} />
+
+    <RelatedAreas exclude={slug} />
+  </main>
+</Layout>

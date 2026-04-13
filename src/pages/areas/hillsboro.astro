@@ -1,0 +1,83 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import ArticleCTA from '../../components/ArticleCTA.astro';
+import RelatedServices from '../../components/RelatedServices.astro';
+import RelatedAreas from '../../components/RelatedAreas.astro';
+
+const SITE = 'https://ltsmobilemechanics.com';
+const city = 'Hillsboro';
+const slug = 'hillsboro';
+
+const schema = {
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "name": `LT's Mobile Mechanics - ${city}`,
+  "image": `${SITE}/og-image.png`,
+  "description": `Mobile mechanic services in ${city}, Oregon. Professional auto repair, diagnostics, and maintenance delivered to your location. Available 24/7.`,
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "4041 SW Hall Blvd",
+    "addressLocality": "Beaverton",
+    "addressRegion": "OR",
+    "postalCode": "97005",
+    "addressCountry": "US"
+  },
+  "telephone": "+19715340360",
+  "email": "ltsmobilepdx@gmail.com",
+  "url": `${SITE}/areas/${slug}/`,
+  "areaServed": { "@type": "City", "name": `${city}, Oregon` },
+  "openingHoursSpecification": {
+    "@type": "OpeningHoursSpecification",
+    "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],
+    "opens": "00:00",
+    "closes": "23:59"
+  },
+  "priceRange": "$$"
+};
+---
+
+<Layout
+  title={`Mobile Mechanic in ${city}, Oregon | LT's Mobile Mechanics`}
+  description={`Professional mobile mechanic services in ${city}, Oregon. Oil changes, brake repair, diagnostics, and more. We come to you. Call (971) 534-0360.`}
+  keywords={`mobile mechanic ${city}, auto repair ${city} Oregon, mechanic near me ${city}, car repair ${city}`}
+  canonical={`https://ltsmobilemechanics.com/areas/${slug}/`}
+  schema={schema}
+>
+  <main>
+    <section class="article-hero">
+      <div class="container">
+        <h1>Mobile Mechanic in <em>{city}</em>, Oregon</h1>
+        <p class="hero-subtitle">Professional auto repair that comes to you — 24/7.</p>
+      </div>
+    </section>
+
+    <section class="container">
+      <article class="article-body">
+        <div class="article-content fade-up">
+          <p>Hillsboro is a city of tech workers, families, and professionals who value efficiency. Whether you're near the Intel campus, living in Orenco Station, working downtown Hillsboro, or parked somewhere along TV Highway, LTs Mobile Mechanics brings professional auto repair to your location. We don't expect you to hunt for a mechanic shop. We come to you.</p>
+
+          <p>LTs Mobile Mechanics serves Hillsboro's growing communities with the same commitment to quality that built this area. Owner Tristan Matthew understands what Hillsboro drivers need: reliable service that fits into busy schedules, honest mechanics who explain what they find, and the flexibility to work when you need it. We're available 24/7 because your vehicle doesn't break on a 9-to-5 schedule.</p>
+
+          <p>The Intel campus area and surrounding tech corridor mean Hillsboro professionals need mechanics who respect their time. That's our specialty. Need an oil change before you head to work? Done. Battery dying in the Orenco parking lot? We'll help. Pre-purchase inspection before you buy that used vehicle? We'll give you the straight story. Brake work? Spark plug service? Suspension issues? Diagnostic trouble that needs sorting? We handle all of it, wherever you are in Hillsboro.</p>
+
+          <p>Hillsboro has grown into a vibrant community with distinct neighborhoods and a real local feel. Downtown Hillsboro brings commerce and culture. Orenco Station offers walkable, residential charm. The areas around TV Highway pulse with energy and commerce. Through all these neighborhoods, LTs Mobile Mechanics is the mechanic Hillsboro residents and workers trust. We show up ready to work, with the right tools and the right attitude.</p>
+
+          <p>Mobile mechanic service changes how you think about car maintenance. Instead of your day revolving around a shop appointment, your mechanic comes to you. We come to your home, your workplace, the parking lot where your car decided to have an issue. We bring the expertise, the diagnostic equipment, and the parts we need. You get your car serviced without the hassle.</p>
+
+          <p>Hillsboro's rapid growth means lots of newer drivers and transplants who need someone they can trust with their vehicles. That's where we come in. We provide honest diagnostics. We don't upsell repairs you don't need. We explain what we find and let you make informed decisions about your vehicle's care. That approach builds trust, and it's why Hillsboro drivers call us back.</p>
+
+          <p>Oil changes, brake repair, spark plug service, battery and alternator work, suspension and steering fixes, diagnostics, pre-purchase inspections, and 24/7 emergency roadside assistance. Whatever your Hillsboro vehicle needs, call LTs Mobile Mechanics at (971) 534-0360 to schedule service or get help fast.</p>
+        </div>
+      </article>
+    </section>
+
+    <ArticleCTA
+      heading={`Need a Mobile Mechanic in ${city}?`}
+      subheading={`Call LT's Mobile Mechanics. We come to you anywhere in ${city} — any time, day or night.`}
+    />
+
+    <RelatedServices heading={`Our Services in ${city}`} />
+
+    <RelatedAreas exclude={slug} />
+  </main>
+</Layout>

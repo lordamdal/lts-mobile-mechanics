@@ -1,0 +1,83 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import ArticleCTA from '../../components/ArticleCTA.astro';
+import RelatedServices from '../../components/RelatedServices.astro';
+import RelatedAreas from '../../components/RelatedAreas.astro';
+
+const SITE = 'https://ltsmobilemechanics.com';
+const city = 'Lake Oswego';
+const slug = 'lake-oswego';
+
+const schema = {
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "name": `LT's Mobile Mechanics - ${city}`,
+  "image": `${SITE}/og-image.png`,
+  "description": `Mobile mechanic services in ${city}, Oregon. Professional auto repair, diagnostics, and maintenance delivered to your location. Available 24/7.`,
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "4041 SW Hall Blvd",
+    "addressLocality": "Beaverton",
+    "addressRegion": "OR",
+    "postalCode": "97005",
+    "addressCountry": "US"
+  },
+  "telephone": "+19715340360",
+  "email": "ltsmobilepdx@gmail.com",
+  "url": `${SITE}/areas/${slug}/`,
+  "areaServed": { "@type": "City", "name": `${city}, Oregon` },
+  "openingHoursSpecification": {
+    "@type": "OpeningHoursSpecification",
+    "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],
+    "opens": "00:00",
+    "closes": "23:59"
+  },
+  "priceRange": "$$"
+};
+---
+
+<Layout
+  title={`Mobile Mechanic in ${city}, Oregon | LT's Mobile Mechanics`}
+  description={`Professional mobile mechanic services in ${city}, Oregon. Oil changes, brake repair, diagnostics, and more. We come to you. Call (971) 534-0360.`}
+  keywords={`mobile mechanic ${city}, auto repair ${city} Oregon, mechanic near me ${city}, car repair ${city}`}
+  canonical={`https://ltsmobilemechanics.com/areas/${slug}/`}
+  schema={schema}
+>
+  <main>
+    <section class="article-hero">
+      <div class="container">
+        <h1>Mobile Mechanic in <em>{city}</em>, Oregon</h1>
+        <p class="hero-subtitle">Professional auto repair that comes to you — 24/7.</p>
+      </div>
+    </section>
+
+    <section class="container">
+      <article class="article-body">
+        <div class="article-content fade-up">
+          <p>Lake Oswego is a community of beauty, quality, and careful attention to detail. Whether you live in downtown Lake Oswego with its charming shops and restaurants, near Oswego Lake in one of the First Addition neighborhoods, or in the growing Lake Grove area, LTs Mobile Mechanics brings professional auto service to your location. We understand that Lake Oswego residents value efficiency and quality, and that's exactly what we deliver.</p>
+
+          <p>LTs Mobile Mechanics serves Lake Oswego with the same commitment to excellence that defines the community. Owner Tristan Matthew built this business on quality work and honest service, and that approach resonates with Lake Oswego drivers. Your vehicle is important to you, and we treat it with the care and attention it deserves. We don't just fix cars. We build relationships with the people who drive them.</p>
+
+          <p>Lake Oswego's combination of lakeside beauty and suburban convenience creates a specific lifestyle. Professionals commuting to Portland. Families enjoying community activities. People who have invested in their homes and their vehicles. These residents need mechanics they can trust completely. LTs Mobile Mechanics serves Lake Oswego with professionalism and expertise. Oil change at your home? Done. Brake service before a trip? We'll handle it. Pre-purchase inspection on that next vehicle? We'll give you honest guidance.</p>
+
+          <p>Mobile mechanic service fits Lake Oswego life perfectly. Instead of disrupting your day by taking your car to a shop, we come to you. Whether you're at home, working at a local business, or at Oswego Lake enjoying community, we bring our expertise to you. Diagnostic work, spark plug service, battery replacement, suspension and steering fixes, emergency roadside help. All handled at your convenience, with professionalism and skill.</p>
+
+          <p>The neighborhoods around downtown Lake Oswego and the First Addition have distinct character and community pride. Lake Grove brings growth and activity. Oswego Lake itself defines the area's lifestyle. Through all these communities, LTs Mobile Mechanics is the mechanic Lake Oswego trusts. We show up ready to work, explain what we find, and deliver quality service that matches your community's standards.</p>
+
+          <p>Lake Oswego residents deserve mechanics who understand quality. Not just quality parts and quality workmanship, but quality service and quality communication. We answer your questions. We don't oversell repairs. We explain options and let you make informed decisions. We respect your vehicle and your time. That's the Lake Oswego standard, and that's what we deliver.</p>
+
+          <p>Oil changes, brake repair, spark plug service, battery and alternator work, suspension and steering fixes, diagnostic expertise, pre-purchase inspections, and 24/7 emergency roadside assistance. Whatever your Lake Oswego vehicle needs, call LTs Mobile Mechanics at (971) 534-0360.</p>
+        </div>
+      </article>
+    </section>
+
+    <ArticleCTA
+      heading={`Need a Mobile Mechanic in ${city}?`}
+      subheading={`Call LT's Mobile Mechanics. We come to you anywhere in ${city} — any time, day or night.`}
+    />
+
+    <RelatedServices heading={`Our Services in ${city}`} />
+
+    <RelatedAreas exclude={slug} />
+  </main>
+</Layout>

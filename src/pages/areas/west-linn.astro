@@ -1,0 +1,93 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import ArticleCTA from '../../components/ArticleCTA.astro';
+import RelatedServices from '../../components/RelatedServices.astro';
+import RelatedAreas from '../../components/RelatedAreas.astro';
+
+const SITE = 'https://ltsmobilemechanics.com';
+const city = 'West Linn';
+const slug = 'west-linn';
+
+const schema = {
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "name": `LT's Mobile Mechanics - ${city}`,
+  "image": `${SITE}/og-image.png`,
+  "description": `Mobile mechanic services in ${city}, Oregon. Professional auto repair, diagnostics, and maintenance delivered to your location. Available 24/7.`,
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "4041 SW Hall Blvd",
+    "addressLocality": "Beaverton",
+    "addressRegion": "OR",
+    "postalCode": "97005",
+    "addressCountry": "US"
+  },
+  "telephone": "+19715340360",
+  "email": "ltsmobilepdx@gmail.com",
+  "url": `${SITE}/areas/${slug}/`,
+  "areaServed": { "@type": "City", "name": `${city}, Oregon` },
+  "openingHoursSpecification": {
+    "@type": "OpeningHoursSpecification",
+    "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],
+    "opens": "00:00",
+    "closes": "23:59"
+  },
+  "priceRange": "$$"
+};
+---
+
+<Layout
+  title={`Mobile Mechanic in ${city}, Oregon | LT's Mobile Mechanics`}
+  description={`Professional mobile mechanic services in ${city}, Oregon. Oil changes, brake repair, diagnostics, and more. We come to you. Call (971) 534-0360.`}
+  keywords={`mobile mechanic ${city}, auto repair ${city} Oregon, mechanic near me ${city}, car repair ${city}`}
+  canonical={`https://ltsmobilemechanics.com/areas/${slug}/`}
+  schema={schema}
+>
+  <main>
+    <section class="article-hero">
+      <div class="container">
+        <h1>Mobile Mechanic in <em>{city}</em>, Oregon</h1>
+        <p class="hero-subtitle">Professional auto repair that comes to you — 24/7.</p>
+      </div>
+    </section>
+
+    <section class="container">
+      <article class="article-body">
+        <div class="article-content fade-up">
+          <p>
+            West Linn is known for its beautiful neighborhoods, excellent schools, and strong sense of community. If you need a mobile mechanic in West Linn, LTs Mobile Mechanics delivers professional auto repair right to your home or office. We serve the entire West Linn area, from the Bolton neighborhood to the Sunset area, with the same expertise and integrity that has made us a trusted choice throughout the Portland metro.
+          </p>
+
+          <p>
+            The Willamette Falls overlook and the scenic views throughout West Linn make it a desirable place to live and work. But vehicle maintenance is still a necessity, even in beautiful surroundings. Whether you're managing a busy household with multiple vehicles or running a small business from your home, LTs Mobile Mechanics understands the West Linn lifestyle. We know your time is valuable, which is why we come to you instead of requiring you to visit a shop. That means more time with your family and less stress about vehicle repair.
+          </p>
+
+          <p>
+            The historic West Linn Paper Mill area and the neighborhoods that have developed throughout West Linn are filled with people who care about quality service. That's exactly what LTs Mobile Mechanics provides. We handle everything from routine maintenance like oil changes and air filter replacements to more complex work like brake repairs, suspension adjustments, and diagnostic services. Every job is approached with the same professional standards, whether it's a quick fix or a major repair.
+          </p>
+
+          <p>
+            One of the real advantages of mobile mechanic service is the time you save. No more rearranging your schedule around shop hours or dealing with the hassle of dropping off your vehicle. We come equipped with all the tools and diagnostic equipment needed to handle your repair properly. Whether it's a battery issue, spark plug replacement, alternator problem, or pre-purchase inspection for that vehicle you're thinking about buying, we've got the expertise to help.
+          </p>
+
+          <p>
+            West Linn residents are discerning about the services they use, and we respect that. We pride ourselves on honest communication, fair pricing, and quality workmanship. No upselling, no unnecessary repairs, just professional advice on what your vehicle actually needs. Tristan Matthew and his team stand behind every repair we perform, and we're committed to keeping your vehicle running smoothly.
+          </p>
+
+          <p>
+            Emergency situations don't wait for convenient hours. That's why LTs Mobile Mechanics operates 24/7. Dead battery on a Sunday? Brake warning light on a holiday evening? We're here to help, whenever you need us. Call us anytime, and we'll get you back on the road with the quality service you deserve.
+          </p>
+        </div>
+      </article>
+    </section>
+
+    <ArticleCTA
+      heading={`Need a Mobile Mechanic in ${city}?`}
+      subheading={`Call LT's Mobile Mechanics. We come to you anywhere in ${city} — any time, day or night.`}
+    />
+
+    <RelatedServices heading={`Our Services in ${city}`} />
+
+    <RelatedAreas exclude={slug} />
+  </main>
+</Layout>

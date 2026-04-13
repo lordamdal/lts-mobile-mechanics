@@ -1,0 +1,82 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import ArticleCTA from '../../components/ArticleCTA.astro';
+import RelatedServices from '../../components/RelatedServices.astro';
+
+const SITE = 'https://ltsmobilemechanics.com';
+const slug = 'brake-repair';
+const serviceTitle = 'Brake Repair';
+
+const schemaData = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "name": `Mobile ${serviceTitle} Service`,
+  "description": `Professional mobile ${serviceTitle.toLowerCase()} service in Beaverton, Portland, and the greater Portland metro area. We come to you — 24/7.`,
+  "provider": {
+    "@type": "LocalBusiness",
+    "name": "LT's Mobile Mechanics",
+    "telephone": "+19715340360",
+    "url": SITE,
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "4041 SW Hall Blvd",
+      "addressLocality": "Beaverton",
+      "addressRegion": "OR",
+      "postalCode": "97005",
+      "addressCountry": "US"
+    }
+  },
+  "areaServed": [
+    "Beaverton, OR","Portland, OR","Hillsboro, OR","Tigard, OR",
+    "Lake Oswego, OR","Tualatin, OR","Aloha, OR","Gresham, OR"
+  ],
+  "url": `${SITE}/services/${slug}/`
+};
+---
+
+<Layout
+  title={`Mobile ${serviceTitle} in Beaverton & Portland, OR | LT's Mobile Mechanics`}
+  description={`Mobile ${serviceTitle.toLowerCase()} service at your home or work in Beaverton, Portland, and the Portland metro. Professional, honest, and available 24/7. Call (971) 534-0360.`}
+  keywords={`mobile ${serviceTitle.toLowerCase()} Portland, mobile mechanic ${serviceTitle.toLowerCase()}, ${serviceTitle.toLowerCase()} Beaverton, ${serviceTitle.toLowerCase()} Portland Oregon`}
+  canonical={`https://ltsmobilemechanics.com/services/${slug}/`}
+  schema={schemaData}
+>
+  <main>
+    <section class="article-hero">
+      <div class="container">
+        <h1>Mobile Brake Repair in <em>Beaverton and Portland</em></h1>
+        <p class="hero-subtitle">Safety is everything. Expert brake service at your location. Brake pads, rotors, calipers, and more. Available 24/7.</p>
+      </div>
+    </section>
+
+    <section class="container">
+      <article class="article-body">
+        <div class="article-content fade-up">
+          <p>Your brakes are one of the most critical safety systems on your vehicle. When something feels off, you need a mechanic you can trust. LTs Mobile Mechanics provides expert brake repair service throughout Beaverton, Portland, and the surrounding metro area. Tristan will come to you, diagnose the problem, and get your brakes working safely again.</p>
+
+          <h2>Signs Your Brakes Need Attention</h2>
+          <p>Pay attention to these warning signs that it's time for brake service. If you hear squealing or grinding noises when you brake, that's usually a sign your brake pads are wearing thin or you have a more serious issue. If your brake pedal feels soft or goes to the floor, you might have a leak in the brake line or low fluid. A pulsing or vibrating pedal suggests your rotors may be warped. If your vehicle pulls to one side when braking, you could have uneven pad wear or a stuck caliper. Don't ignore these signs. Brake problems only get worse and more expensive to fix.</p>
+
+          <h2>What We Fix</h2>
+          <p>LTs Mobile Mechanics handles brake pads, rotors, calipers, brake lines, and brake fluid. Whether you need a simple pad replacement or a more involved repair, Tristan has the skills and experience to get it right. He'll inspect your entire brake system, explain what needs to be done, and give you honest pricing. Our customers in Beaverton and Portland trust us to keep them safe on the road.</p>
+
+          <h2>Mobile Service for Your Safety</h2>
+          <p>With mobile brake repair, you don't have to worry about getting to a shop in Portland or Beaverton. We come to you at home, at work, or wherever you are. Tristan will bring the tools and parts needed to diagnose and fix your brake problem. Since we're open 24/7, if your brakes start acting up at an inconvenient time, give us a call. We can often get you back on the road quickly.</p>
+
+          <h2>Professional Quality You Can Depend On</h2>
+          <p>Brake work isn't something to cheap out on. Your safety and the safety of everyone around you depends on reliable brakes. Tristan approaches every brake job with professionalism and attention to detail. He uses quality parts and makes sure everything is adjusted and functioning properly before he leaves. That's the LTs Mobile Mechanics standard.</p>
+
+          <h2>Get Your Brakes Checked Today</h2>
+          <p>If you're hearing noises, feeling a soft pedal, or just want your brakes inspected, reach out to LTs Mobile Mechanics. We serve Beaverton, Portland, Tigard, Lake Oswego, Gresham, and all surrounding areas. Call anytime, 24/7.</p>
+        </div>
+      </article>
+    </section>
+
+    <ArticleCTA
+      heading={`Ready for ${serviceTitle}?`}
+      subheading={`Call LT's Mobile Mechanics. We come to you in Beaverton, Portland, and throughout the Portland metro — 24/7.`}
+    />
+
+    <RelatedServices exclude={slug} />
+  </main>
+</Layout>

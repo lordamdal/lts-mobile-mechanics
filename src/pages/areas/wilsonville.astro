@@ -1,0 +1,93 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import ArticleCTA from '../../components/ArticleCTA.astro';
+import RelatedServices from '../../components/RelatedServices.astro';
+import RelatedAreas from '../../components/RelatedAreas.astro';
+
+const SITE = 'https://ltsmobilemechanics.com';
+const city = 'Wilsonville';
+const slug = 'wilsonville';
+
+const schema = {
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "name": `LT's Mobile Mechanics - ${city}`,
+  "image": `${SITE}/og-image.png`,
+  "description": `Mobile mechanic services in ${city}, Oregon. Professional auto repair, diagnostics, and maintenance delivered to your location. Available 24/7.`,
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "4041 SW Hall Blvd",
+    "addressLocality": "Beaverton",
+    "addressRegion": "OR",
+    "postalCode": "97005",
+    "addressCountry": "US"
+  },
+  "telephone": "+19715340360",
+  "email": "ltsmobilepdx@gmail.com",
+  "url": `${SITE}/areas/${slug}/`,
+  "areaServed": { "@type": "City", "name": `${city}, Oregon` },
+  "openingHoursSpecification": {
+    "@type": "OpeningHoursSpecification",
+    "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],
+    "opens": "00:00",
+    "closes": "23:59"
+  },
+  "priceRange": "$$"
+};
+---
+
+<Layout
+  title={`Mobile Mechanic in ${city}, Oregon | LT's Mobile Mechanics`}
+  description={`Professional mobile mechanic services in ${city}, Oregon. Oil changes, brake repair, diagnostics, and more. We come to you. Call (971) 534-0360.`}
+  keywords={`mobile mechanic ${city}, auto repair ${city} Oregon, mechanic near me ${city}, car repair ${city}`}
+  canonical={`https://ltsmobilemechanics.com/areas/${slug}/`}
+  schema={schema}
+>
+  <main>
+    <section class="article-hero">
+      <div class="container">
+        <h1>Mobile Mechanic in <em>{city}</em>, Oregon</h1>
+        <p class="hero-subtitle">Professional auto repair that comes to you — 24/7.</p>
+      </div>
+    </section>
+
+    <section class="container">
+      <article class="article-body">
+        <div class="article-content fade-up">
+          <p>
+            Wilsonville is a forward-thinking community positioned right along the I-5 corridor, serving as a vital connection point for the Willamette Valley. The development of the Villebois neighborhood represents the community's commitment to thoughtful, sustainable growth. The Town Center is a hub of activity, and the proximity to Argyle Winery area and the broader wine country makes Wilsonville a unique place to call home. If you need a mobile mechanic in Wilsonville, LTs Mobile Mechanics serves this community with professional auto repair that comes directly to you.
+          </p>
+
+          <p>
+            The I-5 corridor is essential to Wilsonville, and many residents commute through here daily to access employment, education, and services throughout the region. Vehicle reliability is not a luxury in Wilsonville, it's a necessity. Whether you're managing a household with multiple vehicles, running a small business, or commuting to work, LTs Mobile Mechanics understands the importance of keeping your vehicles in top condition. We bring professional expertise directly to your location, eliminating the inconvenience of traditional repair shops.
+          </p>
+
+          <p>
+            The Villebois neighborhood is attracting new residents with its modern design and community focus. The Town Center serves as a gathering place that reflects the community's vitality and forward-thinking approach. At LTs Mobile Mechanics, we believe every community deserves quality service options. That's why we serve Wilsonville with the same professional standards and integrity that have made us trusted throughout the Portland metro area. Whether it's an oil change, brake repair, diagnostic service, or emergency roadside assistance, we deliver quality work.
+          </p>
+
+          <p>
+            SMART transit serves the Wilsonville area, connecting residents to nearby communities. This regional connectivity means many Wilsonville residents travel beyond the city limits daily. Having a reliable mechanic becomes even more important when you're depending on your vehicle for commuting and connectivity. LTs Mobile Mechanics handles all aspects of vehicle maintenance and repair. From routine services like spark plug replacement and battery work to more complex diagnostics and suspension repairs, we have the expertise to keep your vehicle running smoothly.
+          </p>
+
+          <p>
+            What sets LTs Mobile Mechanics apart in Wilsonville is our commitment to convenience without compromising quality. We come to you with professional equipment and expertise, handling repairs right at your location. No waiting in shop lobbies, no rearranging your schedule around shop hours, just efficient service that respects your time. We believe in honest communication about what we find, fair pricing that won't surprise you, and workmanship that you can rely on for the long term.
+          </p>
+
+          <p>
+            The I-5 corridor is a busy place, and vehicle emergencies can happen anytime. That's why LTs Mobile Mechanics operates 24/7. Whether it's early morning before your commute, late evening after you get home, or middle of the night when unexpected issues arise, we're here for you. Call us anytime at your convenience, and we'll dispatch a professional mechanic to help you get your vehicle back on the road safely.
+          </p>
+        </div>
+      </article>
+    </section>
+
+    <ArticleCTA
+      heading={`Need a Mobile Mechanic in ${city}?`}
+      subheading={`Call LT's Mobile Mechanics. We come to you anywhere in ${city} — any time, day or night.`}
+    />
+
+    <RelatedServices heading={`Our Services in ${city}`} />
+
+    <RelatedAreas exclude={slug} />
+  </main>
+</Layout>

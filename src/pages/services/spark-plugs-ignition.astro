@@ -1,0 +1,79 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import ArticleCTA from '../../components/ArticleCTA.astro';
+import RelatedServices from '../../components/RelatedServices.astro';
+
+const SITE = 'https://ltsmobilemechanics.com';
+const slug = 'spark-plugs-ignition';
+const serviceTitle = 'Spark Plugs & Ignition';
+
+const schemaData = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "name": `Mobile ${serviceTitle} Service`,
+  "description": `Professional mobile ${serviceTitle.toLowerCase()} service in Beaverton, Portland, and the greater Portland metro area. We come to you — 24/7.`,
+  "provider": {
+    "@type": "LocalBusiness",
+    "name": "LT's Mobile Mechanics",
+    "telephone": "+19715340360",
+    "url": SITE,
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "4041 SW Hall Blvd",
+      "addressLocality": "Beaverton",
+      "addressRegion": "OR",
+      "postalCode": "97005",
+      "addressCountry": "US"
+    }
+  },
+  "areaServed": [
+    "Beaverton, OR","Portland, OR","Hillsboro, OR","Tigard, OR",
+    "Lake Oswego, OR","Tualatin, OR","Aloha, OR","Gresham, OR"
+  ],
+  "url": `${SITE}/services/${slug}/`
+};
+---
+
+<Layout
+  title={`Mobile ${serviceTitle} in Beaverton & Portland, OR | LT's Mobile Mechanics`}
+  description={`Mobile ${serviceTitle.toLowerCase()} service at your home or work in Beaverton, Portland, and the Portland metro. Professional, honest, and available 24/7. Call (971) 534-0360.`}
+  keywords={`mobile ${serviceTitle.toLowerCase()} Portland, mobile mechanic ${serviceTitle.toLowerCase()}, ${serviceTitle.toLowerCase()} Beaverton, ${serviceTitle.toLowerCase()} Portland Oregon`}
+  canonical={`https://ltsmobilemechanics.com/services/${slug}/`}
+  schema={schemaData}
+>
+  <main>
+    <section class="article-hero">
+      <div class="container">
+        <h1>Mobile Spark Plugs and Ignition Service in <em>Beaverton and Portland</em></h1>
+        <p class="hero-subtitle">Engine misfiring? Rough idle? We'll check your spark plugs and ignition system at your location. Expert service, honest pricing.</p>
+      </div>
+    </section>
+
+    <section class="container">
+      <article class="article-body">
+        <div class="article-content fade-up">
+          <p>Spark plugs might be small, but they do huge work in your engine. They create the spark that ignites the fuel mixture, making combustion happen thousands of times per minute. When spark plugs wear out or the ignition system has problems, your engine suffers. You'll notice rough running, poor fuel economy, trouble starting, and general performance issues. LTs Mobile Mechanics handles spark plug replacement and ignition system repairs throughout Beaverton, Portland, and the surrounding metro area.</p>
+
+          <h2>Signs Your Spark Plugs Need Attention</h2>
+          <p>Spark plugs typically last 30,000 to 100,000 miles depending on the vehicle and driving conditions. If you're noticing a rough idle, hesitation when accelerating, reduced fuel economy, or difficulty starting, worn spark plugs could be the culprit. Some vehicles also have ignition coils that can fail, causing similar problems. Don't let a small spark plug issue turn into a bigger engine problem. Get it checked out.</p>
+
+          <h2>What We Do</h2>
+          <p>We handle spark plug replacement, ignition coil replacement, spark plug wires, and other ignition system components. When Tristan comes to your home or office in Beaverton, Portland, or anywhere in our service area, he'll inspect your ignition system, recommend the right parts for your vehicle, and install them properly. We use quality parts and take care to do the job correctly, making sure everything is torqued, gapped, and connected properly.</p>
+
+          <h2>Mobile Service That Keeps Things Simple</h2>
+          <p>Why mess with taking your vehicle to a service center when we can come to you? Our mobile approach means you stay home, work, or go about your day while we handle the spark plug replacement. With all the tools and parts we need right in our vehicle, we can get the job done efficiently. And with 24/7 availability, we work around your schedule.</p>
+
+          <h2>Get Your Engine Running Smoothly</h2>
+          <p>If your engine is misfiring, running rough, or just not performing like it should, give LTs Mobile Mechanics a call. We serve Beaverton, Portland, Tigard, Hillsboro, Lake Oswego, Gresham, and the entire Portland metro area. Let's get those spark plugs replaced and your engine running right again.</p>
+        </div>
+      </article>
+    </section>
+
+    <ArticleCTA
+      heading={`Ready for ${serviceTitle}?`}
+      subheading={`Call LT's Mobile Mechanics. We come to you in Beaverton, Portland, and throughout the Portland metro — 24/7.`}
+    />
+
+    <RelatedServices exclude={slug} />
+  </main>
+</Layout>

@@ -1,0 +1,83 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import ArticleCTA from '../../components/ArticleCTA.astro';
+import RelatedServices from '../../components/RelatedServices.astro';
+import RelatedAreas from '../../components/RelatedAreas.astro';
+
+const SITE = 'https://ltsmobilemechanics.com';
+const city = 'Tualatin';
+const slug = 'tualatin';
+
+const schema = {
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "name": `LT's Mobile Mechanics - ${city}`,
+  "image": `${SITE}/og-image.png`,
+  "description": `Mobile mechanic services in ${city}, Oregon. Professional auto repair, diagnostics, and maintenance delivered to your location. Available 24/7.`,
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "4041 SW Hall Blvd",
+    "addressLocality": "Beaverton",
+    "addressRegion": "OR",
+    "postalCode": "97005",
+    "addressCountry": "US"
+  },
+  "telephone": "+19715340360",
+  "email": "ltsmobilepdx@gmail.com",
+  "url": `${SITE}/areas/${slug}/`,
+  "areaServed": { "@type": "City", "name": `${city}, Oregon` },
+  "openingHoursSpecification": {
+    "@type": "OpeningHoursSpecification",
+    "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],
+    "opens": "00:00",
+    "closes": "23:59"
+  },
+  "priceRange": "$$"
+};
+---
+
+<Layout
+  title={`Mobile Mechanic in ${city}, Oregon | LT's Mobile Mechanics`}
+  description={`Professional mobile mechanic services in ${city}, Oregon. Oil changes, brake repair, diagnostics, and more. We come to you. Call (971) 534-0360.`}
+  keywords={`mobile mechanic ${city}, auto repair ${city} Oregon, mechanic near me ${city}, car repair ${city}`}
+  canonical={`https://ltsmobilemechanics.com/areas/${slug}/`}
+  schema={schema}
+>
+  <main>
+    <section class="article-hero">
+      <div class="container">
+        <h1>Mobile Mechanic in <em>{city}</em>, Oregon</h1>
+        <p class="hero-subtitle">Professional auto repair that comes to you — 24/7.</p>
+      </div>
+    </section>
+
+    <section class="container">
+      <article class="article-body">
+        <div class="article-content fade-up">
+          <p>Tualatin is a community of growth, parks, and families who value quality living. Whether you're near Bridgeport Village, living in Tualatin Commons, working along the I-5 corridor, or settled in the Nyberg area, LTs Mobile Mechanics brings professional auto service to you. We understand Tualatin residents are busy, and we respect that by bringing repair service to your location instead of making you hunt for a distant shop.</p>
+
+          <p>LTs Mobile Mechanics serves Tualatin with the expertise and professionalism that this growing community deserves. Owner Tristan Matthew built this business on a simple foundation: quality work, honest service, and convenience for busy families and professionals. Your vehicle is an investment, and we treat it with care. We show up on time, do the job right, and make sure you understand what's happening with your car.</p>
+
+          <p>Tualatin's rapid growth means diverse vehicle owners. Young families commuting to work. Professionals who value their time. People who've chosen Tualatin because of its schools and community. All these residents need mechanics they can trust. LTs Mobile Mechanics serves Tualatin with honesty and expertise. Oil change needed? We'll do it at your home. Brake work before a family trip? We handle it efficiently. Pre-purchase inspection on a new family vehicle? We'll give you the facts you need.</p>
+
+          <p>The I-5 corridor brings constant traffic and vehicle wear. Bridgeport Village offers shopping and activity. Tualatin Commons and neighborhoods throughout the area support families and professionals. These different areas share a need for reliable, accessible auto service. That's what LTs Mobile Mechanics provides. Mobile service means you don't lose a day waiting in a shop. We come to you with full diagnostic capability and the tools to fix what needs fixing.</p>
+
+          <p>Tualatin residents understand value. You want quality service that doesn't waste time or money. We deliver exactly that. Spark plug service, battery replacement, alternator work, suspension and steering fixes, diagnostic expertise, brake repair, oil changes, and emergency roadside help. We explain what we find and let you make informed decisions about your vehicle's care. No overselling. No surprises. Just honest, professional service.</p>
+
+          <p>The Nyberg area and growing neighborhoods throughout Tualatin bring families and professionals who deserve mechanics who get it. Get it meaning they understand that your car needs to work reliably, your time is precious, and you want transparent, honest service. LTs Mobile Mechanics serves Tualatin with all of that and more. We're the mechanic your neighbors trust, and we're ready to earn your trust too.</p>
+
+          <p>Oil changes, brake service, spark plug replacement, battery and alternator work, suspension and steering fixes, diagnostic excellence, pre-purchase inspections, and 24/7 emergency roadside assistance. Whatever your Tualatin vehicle needs, call LTs Mobile Mechanics at (971) 534-0360.</p>
+        </div>
+      </article>
+    </section>
+
+    <ArticleCTA
+      heading={`Need a Mobile Mechanic in ${city}?`}
+      subheading={`Call LT's Mobile Mechanics. We come to you anywhere in ${city} — any time, day or night.`}
+    />
+
+    <RelatedServices heading={`Our Services in ${city}`} />
+
+    <RelatedAreas exclude={slug} />
+  </main>
+</Layout>

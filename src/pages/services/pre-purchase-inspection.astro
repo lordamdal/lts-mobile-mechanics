@@ -1,0 +1,82 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import ArticleCTA from '../../components/ArticleCTA.astro';
+import RelatedServices from '../../components/RelatedServices.astro';
+
+const SITE = 'https://ltsmobilemechanics.com';
+const slug = 'pre-purchase-inspection';
+const serviceTitle = 'Pre-Purchase Inspection';
+
+const schemaData = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "name": `Mobile ${serviceTitle} Service`,
+  "description": `Professional mobile ${serviceTitle.toLowerCase()} service in Beaverton, Portland, and the greater Portland metro area. We come to you — 24/7.`,
+  "provider": {
+    "@type": "LocalBusiness",
+    "name": "LT's Mobile Mechanics",
+    "telephone": "+19715340360",
+    "url": SITE,
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "4041 SW Hall Blvd",
+      "addressLocality": "Beaverton",
+      "addressRegion": "OR",
+      "postalCode": "97005",
+      "addressCountry": "US"
+    }
+  },
+  "areaServed": [
+    "Beaverton, OR","Portland, OR","Hillsboro, OR","Tigard, OR",
+    "Lake Oswego, OR","Tualatin, OR","Aloha, OR","Gresham, OR"
+  ],
+  "url": `${SITE}/services/${slug}/`
+};
+---
+
+<Layout
+  title={`Mobile ${serviceTitle} in Beaverton & Portland, OR | LT's Mobile Mechanics`}
+  description={`Mobile ${serviceTitle.toLowerCase()} service at your home or work in Beaverton, Portland, and the Portland metro. Professional, honest, and available 24/7. Call (971) 534-0360.`}
+  keywords={`mobile ${serviceTitle.toLowerCase()} Portland, mobile mechanic ${serviceTitle.toLowerCase()}, ${serviceTitle.toLowerCase()} Beaverton, ${serviceTitle.toLowerCase()} Portland Oregon`}
+  canonical={`https://ltsmobilemechanics.com/services/${slug}/`}
+  schema={schemaData}
+>
+  <main>
+    <section class="article-hero">
+      <div class="container">
+        <h1>Mobile Pre-Purchase Vehicle Inspection in <em>Beaverton and Portland</em></h1>
+        <p class="hero-subtitle">Thinking about buying a used car? Get a professional inspection before you commit. Expert mechanics protect your investment.</p>
+      </div>
+    </section>
+
+    <section class="container">
+      <article class="article-body">
+        <div class="article-content fade-up">
+          <p>Buying a used vehicle is a big decision, and it's easy to fall in love with a car that seems like the perfect deal. But looks can be deceiving. What looks fine on the surface might have serious issues underneath. That's where a pre-purchase inspection comes in. LTs Mobile Mechanics offers professional vehicle inspections throughout Beaverton, Portland, and the surrounding metro area. Tristan will thoroughly examine a vehicle before you buy, giving you the information you need to make a smart decision.</p>
+
+          <h2>Why You Need a Pre-Purchase Inspection</h2>
+          <p>A private seller isn't required to disclose mechanical problems, and even dealers might not tell you about issues with a vehicle. By the time you discover problems after buying, you've already signed the paperwork and it's too late. A pre-purchase inspection is your protection. It identifies mechanical issues, body damage, rust, recalls, and other problems before you hand over your money. It gives you the leverage to negotiate a better price or walk away if the vehicle isn't worth it.</p>
+
+          <h2>What We Check</h2>
+          <p>Our comprehensive pre-purchase inspection covers the major systems. We check the engine, transmission, brakes, suspension, steering, electrical system, and more. We look for signs of accident damage, rust, and mechanical wear. We test the air conditioning and heater. We verify the vehicle's history and check for outstanding recalls. We examine tires, fluids, and fluid leaks. When we're done, you'll have a complete picture of the vehicle's condition and potential repair costs.</p>
+
+          <h2>Mobile Inspection at the Seller's Location</h2>
+          <p>No need to haul the vehicle to our shop. We meet you and the seller at their location in Beaverton, Portland, or anywhere in our service area. The inspection happens right there, taking about an hour or so depending on the vehicle. The seller sees that the inspection is thorough and professional, and you get peace of mind knowing exactly what you're buying.</p>
+
+          <h2>Clear Report, Smart Decisions</h2>
+          <p>After the inspection, Tristan will give you a detailed report explaining what he found. He'll point out any issues, estimate repair costs, and tell you whether the vehicle represents a good deal or if it's better to pass. He'll give you the honest truth, not a sales pitch. Armed with this information, you can negotiate confidently or make the decision to walk away.</p>
+
+          <h2>Don't Buy Blind</h2>
+          <p>Whether you're buying from a dealer or a private seller in the Portland metro area, get a pre-purchase inspection first. It's a small investment that could save you thousands. Call LTs Mobile Mechanics and let Tristan help you make the right choice. Available 24/7 throughout Beaverton, Portland, and surrounding areas.</p>
+        </div>
+      </article>
+    </section>
+
+    <ArticleCTA
+      heading={`Ready for ${serviceTitle}?`}
+      subheading={`Call LT's Mobile Mechanics. We come to you in Beaverton, Portland, and throughout the Portland metro — 24/7.`}
+    />
+
+    <RelatedServices exclude={slug} />
+  </main>
+</Layout>

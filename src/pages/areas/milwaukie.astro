@@ -1,0 +1,93 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import ArticleCTA from '../../components/ArticleCTA.astro';
+import RelatedServices from '../../components/RelatedServices.astro';
+import RelatedAreas from '../../components/RelatedAreas.astro';
+
+const SITE = 'https://ltsmobilemechanics.com';
+const city = 'Milwaukie';
+const slug = 'milwaukie';
+
+const schema = {
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "name": `LT's Mobile Mechanics - ${city}`,
+  "image": `${SITE}/og-image.png`,
+  "description": `Mobile mechanic services in ${city}, Oregon. Professional auto repair, diagnostics, and maintenance delivered to your location. Available 24/7.`,
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "4041 SW Hall Blvd",
+    "addressLocality": "Beaverton",
+    "addressRegion": "OR",
+    "postalCode": "97005",
+    "addressCountry": "US"
+  },
+  "telephone": "+19715340360",
+  "email": "ltsmobilepdx@gmail.com",
+  "url": `${SITE}/areas/${slug}/`,
+  "areaServed": { "@type": "City", "name": `${city}, Oregon` },
+  "openingHoursSpecification": {
+    "@type": "OpeningHoursSpecification",
+    "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],
+    "opens": "00:00",
+    "closes": "23:59"
+  },
+  "priceRange": "$$"
+};
+---
+
+<Layout
+  title={`Mobile Mechanic in ${city}, Oregon | LT's Mobile Mechanics`}
+  description={`Professional mobile mechanic services in ${city}, Oregon. Oil changes, brake repair, diagnostics, and more. We come to you. Call (971) 534-0360.`}
+  keywords={`mobile mechanic ${city}, auto repair ${city} Oregon, mechanic near me ${city}, car repair ${city}`}
+  canonical={`https://ltsmobilemechanics.com/areas/${slug}/`}
+  schema={schema}
+>
+  <main>
+    <section class="article-hero">
+      <div class="container">
+        <h1>Mobile Mechanic in <em>{city}</em>, Oregon</h1>
+        <p class="hero-subtitle">Professional auto repair that comes to you — 24/7.</p>
+      </div>
+    </section>
+
+    <section class="container">
+      <article class="article-body">
+        <div class="article-content fade-up">
+          <p>
+            Looking for a trusted mobile mechanic in Milwaukie? LTs Mobile Mechanics brings professional auto repair directly to your location. Whether you're in historic downtown Milwaukie, along the scenic Kellogg Creek, or anywhere in between, we come to you for fast, reliable service.
+          </p>
+
+          <p>
+            Milwaukie has a special charm that attracts residents who value quality and community. The historic main street has seen a real revival in recent years, and the nearby Orange Line keeps people connected across the region. At LTs Mobile Mechanics, we understand what Milwaukie residents need, because we serve this community with the same care and attention that locals expect from their service providers. Tristan Matthew and his team have built a reputation on honest work and genuine expertise, and that's what you get every time you call.
+          </p>
+
+          <p>
+            The McLoughlin Boulevard corridor and the neighborhoods around downtown Milwaukie see a lot of traffic. Whether you're commuting to work, managing a small business, or just keeping your family's vehicles running smoothly, having a reliable mechanic is essential. Our mobile service eliminates the inconvenience of traditional repair shops. No more sitting in waiting rooms or worrying about how you'll get home while your car is being fixed. We handle everything from oil changes to complex diagnostics right at your location.
+          </p>
+
+          <p>
+            Kellogg Creek flows through Milwaukie, and the area's natural beauty is part of what makes it such a great place to call home. But vehicle maintenance is a reality for everyone, and that's where LTs Mobile Mechanics comes in. We're equipped to handle any repair your vehicle needs, whether it's brake work, battery replacement, spark plug service, or suspension repairs. We bring professional-grade diagnostic equipment to every job, ensuring we identify problems accurately and fix them right the first time.
+          </p>
+
+          <p>
+            One of the biggest advantages of mobile mechanic service is convenience. If you need your vehicle worked on, you shouldn't have to rearrange your entire day around a repair shop's hours. LTs Mobile Mechanics operates 24/7 because we know emergencies don't follow a schedule. Dead battery on a holiday? Brake issue before an important drive? We're here to help, anytime, day or night.
+          </p>
+
+          <p>
+            Choosing LTs Mobile Mechanics means choosing quality service without the hassle. We come to you with integrity, expertise, and a commitment to fair pricing. Your vehicle is important to you, and we treat it with the respect it deserves. That's the Milwaukie difference when you work with LTs Mobile Mechanics.
+          </p>
+        </div>
+      </article>
+    </section>
+
+    <ArticleCTA
+      heading={`Need a Mobile Mechanic in ${city}?`}
+      subheading={`Call LT's Mobile Mechanics. We come to you anywhere in ${city} — any time, day or night.`}
+    />
+
+    <RelatedServices heading={`Our Services in ${city}`} />
+
+    <RelatedAreas exclude={slug} />
+  </main>
+</Layout>

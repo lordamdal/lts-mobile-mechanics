@@ -1,0 +1,83 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import ArticleCTA from '../../components/ArticleCTA.astro';
+import RelatedServices from '../../components/RelatedServices.astro';
+import RelatedAreas from '../../components/RelatedAreas.astro';
+
+const SITE = 'https://ltsmobilemechanics.com';
+const city = 'Tigard';
+const slug = 'tigard';
+
+const schema = {
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "name": `LT's Mobile Mechanics - ${city}`,
+  "image": `${SITE}/og-image.png`,
+  "description": `Mobile mechanic services in ${city}, Oregon. Professional auto repair, diagnostics, and maintenance delivered to your location. Available 24/7.`,
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "4041 SW Hall Blvd",
+    "addressLocality": "Beaverton",
+    "addressRegion": "OR",
+    "postalCode": "97005",
+    "addressCountry": "US"
+  },
+  "telephone": "+19715340360",
+  "email": "ltsmobilepdx@gmail.com",
+  "url": `${SITE}/areas/${slug}/`,
+  "areaServed": { "@type": "City", "name": `${city}, Oregon` },
+  "openingHoursSpecification": {
+    "@type": "OpeningHoursSpecification",
+    "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],
+    "opens": "00:00",
+    "closes": "23:59"
+  },
+  "priceRange": "$$"
+};
+---
+
+<Layout
+  title={`Mobile Mechanic in ${city}, Oregon | LT's Mobile Mechanics`}
+  description={`Professional mobile mechanic services in ${city}, Oregon. Oil changes, brake repair, diagnostics, and more. We come to you. Call (971) 534-0360.`}
+  keywords={`mobile mechanic ${city}, auto repair ${city} Oregon, mechanic near me ${city}, car repair ${city}`}
+  canonical={`https://ltsmobilemechanics.com/areas/${slug}/`}
+  schema={schema}
+>
+  <main>
+    <section class="article-hero">
+      <div class="container">
+        <h1>Mobile Mechanic in <em>{city}</em>, Oregon</h1>
+        <p class="hero-subtitle">Professional auto repair that comes to you — 24/7.</p>
+      </div>
+    </section>
+
+    <section class="container">
+      <article class="article-body">
+        <div class="article-content fade-up">
+          <p>Tigard is a thriving community with neighborhoods ranging from downtown Tigard to the quiet streets of Bull Mountain, from the Tigard Triangle to the areas near Fanno Creek. Whether you're stuck near Highway 99W, parked at home, or need service at your workplace, LTs Mobile Mechanics comes to you. We serve Tigard with the same professional approach that's earned trust across the metro area.</p>
+
+          <p>LTs Mobile Mechanics understands Tigard's character. It's a community of families, young professionals, and people who value both growth and local character. Owner Tristan Matthew built this business on that same foundation: quality work, honest service, and respect for your time. We come to you because we know Tigard residents are busy. Your car shouldn't add another task to your day.</p>
+
+          <p>Tigard drivers face real challenges. The 99W corridor brings traffic and wear on vehicles. Bull Mountain's elevation means suspension gets tested. Downtown Tigard's commercial activity keeps cars running hard. Fanno Creek area and the neighborhoods around the Tigard Triangle pulse with activity. Through all these areas, LTs Mobile Mechanics is the mechanic Tigard trusts. We show up ready, with the right equipment and the right attitude.</p>
+
+          <p>Mobile mechanic service changes everything. Instead of taking your car to a distant shop and waiting in a waiting room, you stay home or stay at work. We come to you with full diagnostic capability and the tools to handle your service on the spot. Oil change? Done at your location. Brake repair? We handle it where your car sits. Battery dying? Pre-purchase inspection needed? Spark plug service? All handled at your convenience.</p>
+
+          <p>Tigard's diverse community spans different generations and backgrounds. New drivers need mechanics they can trust. Experienced drivers need honest service they've come to rely on. Families need reliable cars that work when they need them. LTs Mobile Mechanics serves all of Tigard with the same commitment to quality. We don't oversell repairs. We explain what we find. We answer questions. We treat your vehicle with care.</p>
+
+          <p>The Tigard area's mix of residential neighborhoods and commercial corridors means real vehicle diversity. We service everything that comes our way. We've got the diagnostic equipment to figure out what's wrong. We've got the skill to fix it right. We've got the professionalism to work in your neighborhood without drama. That's why Tigard residents call us back.</p>
+
+          <p>Oil changes, brake service, spark plug replacement, battery and alternator work, suspension and steering fixes, diagnostic trouble-shooting, pre-purchase inspections, and emergency roadside help. Whatever your Tigard vehicle needs, call LTs Mobile Mechanics at (971) 534-0360. We're available 24/7.</p>
+        </div>
+      </article>
+    </section>
+
+    <ArticleCTA
+      heading={`Need a Mobile Mechanic in ${city}?`}
+      subheading={`Call LT's Mobile Mechanics. We come to you anywhere in ${city} — any time, day or night.`}
+    />
+
+    <RelatedServices heading={`Our Services in ${city}`} />
+
+    <RelatedAreas exclude={slug} />
+  </main>
+</Layout>

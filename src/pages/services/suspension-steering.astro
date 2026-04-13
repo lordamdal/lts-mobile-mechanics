@@ -1,0 +1,82 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import ArticleCTA from '../../components/ArticleCTA.astro';
+import RelatedServices from '../../components/RelatedServices.astro';
+
+const SITE = 'https://ltsmobilemechanics.com';
+const slug = 'suspension-steering';
+const serviceTitle = 'Suspension & Steering';
+
+const schemaData = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "name": `Mobile ${serviceTitle} Service`,
+  "description": `Professional mobile ${serviceTitle.toLowerCase()} service in Beaverton, Portland, and the greater Portland metro area. We come to you — 24/7.`,
+  "provider": {
+    "@type": "LocalBusiness",
+    "name": "LT's Mobile Mechanics",
+    "telephone": "+19715340360",
+    "url": SITE,
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "4041 SW Hall Blvd",
+      "addressLocality": "Beaverton",
+      "addressRegion": "OR",
+      "postalCode": "97005",
+      "addressCountry": "US"
+    }
+  },
+  "areaServed": [
+    "Beaverton, OR","Portland, OR","Hillsboro, OR","Tigard, OR",
+    "Lake Oswego, OR","Tualatin, OR","Aloha, OR","Gresham, OR"
+  ],
+  "url": `${SITE}/services/${slug}/`
+};
+---
+
+<Layout
+  title={`Mobile ${serviceTitle} in Beaverton & Portland, OR | LT's Mobile Mechanics`}
+  description={`Mobile ${serviceTitle.toLowerCase()} service at your home or work in Beaverton, Portland, and the Portland metro. Professional, honest, and available 24/7. Call (971) 534-0360.`}
+  keywords={`mobile ${serviceTitle.toLowerCase()} Portland, mobile mechanic ${serviceTitle.toLowerCase()}, ${serviceTitle.toLowerCase()} Beaverton, ${serviceTitle.toLowerCase()} Portland Oregon`}
+  canonical={`https://ltsmobilemechanics.com/services/${slug}/`}
+  schema={schemaData}
+>
+  <main>
+    <section class="article-hero">
+      <div class="container">
+        <h1>Mobile Suspension and Steering Service in <em>Beaverton and Portland</em></h1>
+        <p class="hero-subtitle">Rough ride? Steering problems? We fix shocks, struts, control arms, and steering components at your location.</p>
+      </div>
+    </section>
+
+    <section class="container">
+      <article class="article-body">
+        <div class="article-content fade-up">
+          <p>Your suspension and steering systems are crucial for comfort, control, and safety. When components wear out, your ride gets rough, your vehicle might pull to one side, or steering feels loose and unpredictable. LTs Mobile Mechanics handles suspension and steering repairs throughout Beaverton, Portland, and the surrounding metro area. Tristan will diagnose the problem and fix it right at your location.</p>
+
+          <h2>Suspension Problems You'll Notice</h2>
+          <p>A failing suspension makes itself known. If you're bouncing excessively after hitting a bump or hearing clunking noises when you go over rough roads, your shocks or struts might be worn. A vehicle that sits lower on one corner could have a broken spring or blown shock. Excessive body roll when cornering is another sign something's not right. Worn suspension components don't just make for a rough ride. They affect handling, safety, and can cause uneven tire wear that costs you money.</p>
+
+          <h2>Steering and Handling Issues</h2>
+          <p>Does your steering wheel feel loose or unresponsive? Does your vehicle pull to one side? Does the steering feel stiff or make noise when you turn? These are signs of suspension or steering component wear. Ball joints, control arms, tie rods, and power steering components can all wear out and need replacement. Steering problems affect your ability to control the vehicle and should never be ignored.</p>
+
+          <h2>What We Fix</h2>
+          <p>We handle shocks, struts, springs, control arms, ball joints, tie rods, and power steering service. Tristan will inspect your suspension system, identify the problem, explain what needs to be done, and give you fair pricing. Once you approve, he'll do the work right there at your home or office in Beaverton, Portland, or anywhere in our service area. No need to take your vehicle to a shop.</p>
+
+          <h2>Mobile Service for Suspension Work</h2>
+          <p>Suspension work traditionally happens at a service center with a lift. With LTs Mobile Mechanics, we bring the equipment to you. Tristan has portable lifting equipment and all the tools needed to do suspension work safely and properly. You get the same quality of work, just at your location. And with 24/7 availability, we can fit into your schedule.</p>
+
+          <h2>Get Your Suspension Fixed</h2>
+          <p>If your ride is rough, your steering feels off, or you want to get your suspension checked out, call LTs Mobile Mechanics. We serve Beaverton, Portland, Tigard, Lake Oswego, Gresham, and the entire Portland metro area. Let's get your vehicle handling smoothly again.</p>
+        </div>
+      </article>
+    </section>
+
+    <ArticleCTA
+      heading={`Ready for ${serviceTitle}?`}
+      subheading={`Call LT's Mobile Mechanics. We come to you in Beaverton, Portland, and throughout the Portland metro — 24/7.`}
+    />
+
+    <RelatedServices exclude={slug} />
+  </main>
+</Layout>

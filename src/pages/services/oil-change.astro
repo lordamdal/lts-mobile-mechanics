@@ -1,0 +1,82 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import ArticleCTA from '../../components/ArticleCTA.astro';
+import RelatedServices from '../../components/RelatedServices.astro';
+
+const SITE = 'https://ltsmobilemechanics.com';
+const slug = 'oil-change';
+const serviceTitle = 'Oil Change';
+
+const schemaData = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "name": `Mobile ${serviceTitle} Service`,
+  "description": `Professional mobile ${serviceTitle.toLowerCase()} service in Beaverton, Portland, and the greater Portland metro area. We come to you — 24/7.`,
+  "provider": {
+    "@type": "LocalBusiness",
+    "name": "LT's Mobile Mechanics",
+    "telephone": "+19715340360",
+    "url": SITE,
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "4041 SW Hall Blvd",
+      "addressLocality": "Beaverton",
+      "addressRegion": "OR",
+      "postalCode": "97005",
+      "addressCountry": "US"
+    }
+  },
+  "areaServed": [
+    "Beaverton, OR","Portland, OR","Hillsboro, OR","Tigard, OR",
+    "Lake Oswego, OR","Tualatin, OR","Aloha, OR","Gresham, OR"
+  ],
+  "url": `${SITE}/services/${slug}/`
+};
+---
+
+<Layout
+  title={`Mobile ${serviceTitle} in Beaverton & Portland, OR | LT's Mobile Mechanics`}
+  description={`Mobile ${serviceTitle.toLowerCase()} service at your home or work in Beaverton, Portland, and the Portland metro. Professional, honest, and available 24/7. Call (971) 534-0360.`}
+  keywords={`mobile ${serviceTitle.toLowerCase()} Portland, mobile mechanic ${serviceTitle.toLowerCase()}, ${serviceTitle.toLowerCase()} Beaverton, ${serviceTitle.toLowerCase()} Portland Oregon`}
+  canonical={`https://ltsmobilemechanics.com/services/${slug}/`}
+  schema={schemaData}
+>
+  <main>
+    <section class="article-hero">
+      <div class="container">
+        <h1>Mobile Oil Change in <em>Beaverton and Portland</em></h1>
+        <p class="hero-subtitle">We come to you for quick, professional oil changes. No waiting rooms, no hassle. Expert service at your home or office.</p>
+      </div>
+    </section>
+
+    <section class="container">
+      <article class="article-body">
+        <div class="article-content fade-up">
+          <p>An oil change is one of the most important maintenance tasks you can do for your vehicle, but it doesn't have to be a hassle. With LTs Mobile Mechanics, you can skip the trip to a service center in Beaverton or Portland and have your oil changed right where you are. Whether you're at home, at work, or anywhere in the surrounding metro area, Tristan will come to you and get the job done right.</p>
+
+          <h2>Why Regular Oil Changes Matter</h2>
+          <p>Your engine oil does the hard work of lubricating moving parts, reducing friction, and carrying away heat. Over time, oil breaks down and gets dirty, losing its effectiveness. Regular oil changes keep your engine running smoothly, prevent wear, and extend your vehicle's life. Most vehicles need an oil change every 3,000 to 7,500 miles or every three to six months, depending on the vehicle and type of oil.</p>
+
+          <h2>What We Do</h2>
+          <p>LTs Mobile Mechanics handles all types of oil changes. We'll drain the old oil, replace the oil filter, top up your fluids, and dispose of the old oil responsibly. Whether you need conventional, synthetic, or synthetic blend oil, we use quality products and get the job done efficiently. Tristan will check your vehicle during the service and let you know if anything else needs attention.</p>
+
+          <h2>Mobile Service That Works</h2>
+          <p>The mobile approach makes life easier. No need to arrange a ride or sit in a waiting room. We bring the tools and supplies to your location in Beaverton, Portland, Tigard, Hillsboro, or anywhere else in our service area. You can stay home, head to work, or just relax while we handle your oil change. And with 24/7 availability, we can work around your schedule.</p>
+
+          <h2>Honest Pricing, Professional Service</h2>
+          <p>Our customers appreciate the honest pricing and quality work. LTs Mobile Mechanics doesn't add unnecessary charges or try to sell you services you don't need. We explain what's happening and give you a fair price upfront. That's how we've built trust with drivers throughout the Portland metro area.</p>
+
+          <h2>Your Next Oil Change</h2>
+          <p>When it's time for an oil change, give Tristan a call. We're here 24/7 to serve Beaverton, Portland, and the surrounding communities. No scheduling headaches, no dealership prices. Just a professional mechanic who comes to you.</p>
+        </div>
+      </article>
+    </section>
+
+    <ArticleCTA
+      heading={`Ready for ${serviceTitle}?`}
+      subheading={`Call LT's Mobile Mechanics. We come to you in Beaverton, Portland, and throughout the Portland metro — 24/7.`}
+    />
+
+    <RelatedServices exclude={slug} />
+  </main>
+</Layout>
