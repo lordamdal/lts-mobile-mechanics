@@ -1,74 +1,141 @@
 ---
-import Layout from '../layouts/Layout.astro';
+import Layout from "../layouts/Layout.astro";
 
-const SITE = 'https://ltsmobilemechanics.com';
+const SITE = "https://ltsmobilemechanics.com";
 
 const schemaData = {
   "@context": "https://schema.org",
   "@type": "AutoRepair",
-  "name": "LT's Mobile Mechanics",
-  "image": `${SITE}/og-image.png`,
-  "logo": `${SITE}/favicon.svg`,
-  "description": "Mobile auto repair in Beaverton and Portland, Oregon. We come to you for brakes, oil changes, batteries, diagnostics, and emergency roadside service. Open Mon-Sat 8am-7pm.",
-  "address": {
+  name: "LT's Mobile Mechanics",
+  image: `${SITE}/og-image.png`,
+  logo: `${SITE}/favicon.svg`,
+  description:
+    "Mobile auto repair in Beaverton and Portland, Oregon. We come to you for brakes, oil changes, batteries, diagnostics, and emergency roadside service. Open Mon-Sat 8am-7pm.",
+  address: {
     "@type": "PostalAddress",
-    "streetAddress": "4041 SW Hall Blvd",
-    "addressLocality": "Beaverton",
-    "addressRegion": "OR",
-    "postalCode": "97005",
-    "addressCountry": "US"
+    streetAddress: "4041 SW Hall Blvd",
+    addressLocality: "Beaverton",
+    addressRegion: "OR",
+    postalCode: "97005",
+    addressCountry: "US",
   },
-  "geo": {
+  geo: {
     "@type": "GeoCoordinates",
-    "latitude": 45.487,
-    "longitude": -122.804
+    latitude: 45.487,
+    longitude: -122.804,
   },
-  "telephone": "+19715340360",
-  "email": "ltsmobilepdx@gmail.com",
-  "url": SITE,
-  "priceRange": "$$",
-  "areaServed": [
-    "Beaverton, OR", "Portland, OR", "Hillsboro, OR", "Tigard, OR",
-    "Lake Oswego, OR", "Tualatin, OR", "Aloha, OR", "Gresham, OR",
-    "Milwaukie, OR", "West Linn, OR", "Oregon City, OR",
-    "Clackamas, OR", "Sherwood, OR", "Wilsonville, OR"
+  telephone: "+19715340360",
+  email: "ltsmobilepdx@gmail.com",
+  url: SITE,
+  priceRange: "$$",
+  areaServed: [
+    "Beaverton, OR",
+    "Portland, OR",
+    "Hillsboro, OR",
+    "Tigard, OR",
+    "Lake Oswego, OR",
+    "Tualatin, OR",
+    "Aloha, OR",
+    "Gresham, OR",
+    "Milwaukie, OR",
+    "West Linn, OR",
+    "Oregon City, OR",
+    "Clackamas, OR",
+    "Sherwood, OR",
+    "Wilsonville, OR",
   ],
-  "openingHoursSpecification": {
+  openingHoursSpecification: {
     "@type": "OpeningHoursSpecification",
-    "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"],
-    "opens": "08:00",
-    "closes": "19:00"
+    dayOfWeek: [
+      "Monday",
+      "Tuesday",
+      "Wednesday",
+      "Thursday",
+      "Friday",
+      "Saturday",
+    ],
+    opens: "08:00",
+    closes: "19:00",
   },
-  "aggregateRating": {
+  aggregateRating: {
     "@type": "AggregateRating",
-    "ratingValue": "5.0",
-    "reviewCount": "12"
+    ratingValue: "5.0",
+    reviewCount: "12",
   },
-  "sameAs": [
+  sameAs: [
     "https://www.facebook.com/p/LTs-Mobile-Mechanics-61582489155322/",
     "https://www.instagram.com/lts_mobile_mechanics/",
     "https://nextdoor.com/pages/lts-mobile-mechanics-kettering-oh/",
-    "https://share.google/kUYl7oR3Eut3ParPA"
-  ]
+    "https://share.google/kUYl7oR3Eut3ParPA",
+  ],
 };
 
 const services = [
-  { href: '/services/oil-change/', title: 'Oil & Fluid Services', desc: 'Quick, professional oil changes and fluid top-offs at your home or work.', icon: 'oil' },
-  { href: '/services/brake-repair/', title: 'Brake Repair', desc: 'Brake pads, rotors, lines, and complete brake service.', icon: 'brake' },
-  { href: '/services/diagnostics/', title: 'Diagnostics', desc: 'Computer diagnostics and check-engine-light troubleshooting.', icon: 'diag' },
-  { href: '/services/spark-plugs-ignition/', title: 'Spark Plugs & Ignition', desc: 'Spark plugs, coils, and complete ignition system repair.', icon: 'spark' },
-  { href: '/services/battery-alternator/', title: 'Battery & Alternator', desc: 'Testing, replacement, and alternator service on-site.', icon: 'battery' },
-  { href: '/services/suspension-steering/', title: 'Suspension & Steering', desc: 'Shocks, struts, control arms, and steering repair.', icon: 'wrench' },
-  { href: '/services/pre-purchase-inspection/', title: 'Pre-Purchase Inspection', desc: 'Thorough inspections before you buy a used vehicle.', icon: 'check' },
-  { href: '/services/emergency-roadside/', title: 'Emergency Roadside', desc: 'Stranded or broken down? Mon-Sat 8am-7pm mobile assistance.', icon: 'alert' },
+  {
+    href: "/services/oil-change/",
+    title: "Oil & Fluid Services",
+    desc: "Quick, professional oil changes and fluid top-offs at your home or work.",
+    icon: "oil",
+  },
+  {
+    href: "/services/brake-repair/",
+    title: "Brake Repair",
+    desc: "Brake pads, rotors, lines, and complete brake service.",
+    icon: "brake",
+  },
+  {
+    href: "/services/diagnostics/",
+    title: "Diagnostics",
+    desc: "Computer diagnostics and check-engine-light troubleshooting.",
+    icon: "diag",
+  },
+  {
+    href: "/services/spark-plugs-ignition/",
+    title: "Spark Plugs & Ignition",
+    desc: "Spark plugs, coils, and complete ignition system repair.",
+    icon: "spark",
+  },
+  {
+    href: "/services/battery-alternator/",
+    title: "Battery & Alternator",
+    desc: "Testing, replacement, and alternator service on-site.",
+    icon: "battery",
+  },
+  {
+    href: "/services/suspension-steering/",
+    title: "Suspension & Steering",
+    desc: "Shocks, struts, control arms, and steering repair.",
+    icon: "wrench",
+  },
+  {
+    href: "/services/pre-purchase-inspection/",
+    title: "Pre-Purchase Inspection",
+    desc: "Thorough inspections before you buy a used vehicle.",
+    icon: "check",
+  },
+  {
+    href: "/services/emergency-roadside/",
+    title: "Emergency Roadside",
+    desc: "Stranded or broken down? Mon-Sat 8am-7pm mobile assistance.",
+    icon: "alert",
+  },
 ];
 
 const areas = [
-  { name: 'Beaverton', primary: true }, { name: 'Portland', primary: true },
-  { name: 'Hillsboro' }, { name: 'Tigard' }, { name: 'Lake Oswego' },
-  { name: 'Tualatin' }, { name: 'Aloha' }, { name: 'Gresham' },
-  { name: 'Milwaukie' }, { name: 'West Linn' }, { name: 'Oregon City' },
-  { name: 'Clackamas' }, { name: 'Sherwood' }, { name: 'Wilsonville' },
+  { name: "Beaverton", primary: true },
+  { name: "Portland", primary: true },
+  { name: "Hillsboro" },
+  { name: "Tigard" },
+  { name: "Lake Oswego" },
+  { name: "Tualatin" },
+  { name: "Aloha" },
+  { name: "Gresham" },
+  { name: "Milwaukie" },
+  { name: "West Linn" },
+  { name: "Oregon City" },
+  { name: "Clackamas" },
+  { name: "Sherwood" },
+  { name: "Wilsonville" },
 ];
 ---
 
@@ -79,345 +146,819 @@ const areas = [
   canonical="https://ltsmobilemechanics.com/"
   schema={schemaData}
 >
-
-<main>
-  <!-- Hero -->
-  <section class="section hero-section">
-    <div class="container">
-      <div class="hero-content">
-        <span class="hero-badge">
-          <span class="dot" aria-hidden="true"></span>
-          Open Mon&ndash;Sat &middot; 8am&ndash;7pm &middot; Portland Metro
-        </span>
-        <h1>The Mobile Mechanic <em>You Can Trust</em></h1>
-        <p class="hero-subtitle">We come to you. Expert auto repair delivered right to your driveway in Beaverton, Portland, and the greater Portland metro &mdash; Monday through Saturday.</p>
-        <div class="hero-cta">
-          <a href="tel:+19715340360" class="btn btn-gold">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-            Call (971) 534-0360
-          </a>
-          <a href="#contact" class="btn btn-outline">Get a Free Quote</a>
-        </div>
-
-        <div class="hero-stats">
-          <div class="hero-stat">
-            <div class="hero-stat-value">Mon&ndash;Sat</div>
-            <div class="hero-stat-label">8am&ndash;7pm</div>
+  <main>
+    <!-- Hero -->
+    <section class="section hero-section">
+      <div class="container">
+        <div class="hero-content">
+          <span class="hero-badge">
+            <span class="dot" aria-hidden="true"></span>
+            Open Mon&ndash;Sat &middot; 8am&ndash;7pm &middot; Portland Metro
+          </span>
+          <h1>The Mobile Mechanic <em>You Can Trust</em></h1>
+          <p class="hero-subtitle">
+            We come to you. Expert auto repair delivered right to your driveway
+            in Beaverton, Portland, and the greater Portland metro &mdash;
+            Monday through Saturday.
+          </p>
+          <div class="hero-cta">
+            <a href="tel:+19715340360" class="btn btn-gold">
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                aria-hidden="true"
+                ><path
+                  d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"
+                ></path>
+              </svg>
+              Call (971) 534-0360
+            </a>
+            <a href="#contact" class="btn btn-outline">Get a Free Quote</a>
           </div>
-          <div class="hero-stat">
-            <div class="hero-stat-value">100%</div>
-            <div class="hero-stat-label">Mobile Service</div>
-          </div>
-          <div class="hero-stat">
-            <div class="hero-stat-value">PDX</div>
-            <div class="hero-stat-label">Locally Owned</div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
 
-  <!-- Services -->
-  <section class="section services-section" id="services">
-    <div class="container">
-      <div class="section-header">
-        <span class="section-label">What We Do</span>
-        <h2 class="section-title">Mobile Repair Services</h2>
-        <p class="section-subtitle">Expert mechanical work at your location in Beaverton, Portland, and surrounding areas.</p>
-      </div>
-      <div class="services-grid">
-        {services.map(s => (
-          <a href={s.href} class="service-card fade-up">
-            <div class="service-icon" aria-hidden="true">
-              {s.icon === 'oil' && <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2.69l5.66 5.66a8 8 0 1 1-11.31 0z"/></svg>}
-              {s.icon === 'brake' && <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="4"/><line x1="4.93" y1="4.93" x2="9.17" y2="9.17"/><line x1="14.83" y1="14.83" x2="19.07" y2="19.07"/><line x1="14.83" y1="9.17" x2="19.07" y2="4.93"/><line x1="4.93" y1="19.07" x2="9.17" y2="14.83"/></svg>}
-              {s.icon === 'diag' && <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>}
-              {s.icon === 'spark' && <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>}
-              {s.icon === 'battery' && <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="1" y="6" width="18" height="12" rx="2"/><line x1="23" y1="13" x2="23" y2="11"/><line x1="6" y1="10" x2="6" y2="14"/><line x1="10" y1="10" x2="10" y2="14"/><line x1="14" y1="12" x2="16" y2="12"/></svg>}
-              {s.icon === 'wrench' && <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>}
-              {s.icon === 'check' && <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>}
-              {s.icon === 'alert' && <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>}
+          <div class="hero-stats">
+            <div class="hero-stat">
+              <div class="hero-stat-value">Mon&ndash;Sat</div>
+              <div class="hero-stat-label">8am&ndash;7pm</div>
             </div>
-            <h3>{s.title}</h3>
-            <p>{s.desc}</p>
-            <span class="service-link-arrow">
-              Learn More
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
-            </span>
-          </a>
-        ))}
-      </div>
-    </div>
-  </section>
-
-  <!-- Why Us -->
-  <section class="section why-section">
-    <div class="container">
-      <div class="section-header">
-        <span class="section-label">Why Choose Us</span>
-        <h2 class="section-title">The LT's Mobile Mechanics Difference</h2>
-        <p class="section-subtitle">Honest, expert auto care that respects your time and your vehicle.</p>
-      </div>
-      <div class="why-us-grid">
-        <div class="why-card fade-up">
-          <div class="why-icon" aria-hidden="true">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 16H9m10 0h3v-3.15a1 1 0 0 0-.84-.99L16 11l-2.7-3.6a1 1 0 0 0-.8-.4H5.24a2 2 0 0 0-1.8 1.1l-.8 1.63A6 6 0 0 0 2 12.42V16h2"/><circle cx="6.5" cy="16.5" r="2.5"/><circle cx="16.5" cy="16.5" r="2.5"/></svg>
-          </div>
-          <h3>Mobile Service</h3>
-          <p>We come to you. No waiting rooms, no rides to arrange. We handle repairs at your home, office, or wherever you're parked.</p>
-        </div>
-        <div class="why-card fade-up">
-          <div class="why-icon" aria-hidden="true">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
-          </div>
-          <h3>Flexible Hours</h3>
-          <p>Open Mon through Saturday, 8am to 7pm. Give Tristan a call to schedule a repair, quick service, or a diagnostic at your location.</p>
-        </div>
-        <div class="why-card fade-up">
-          <div class="why-icon" aria-hidden="true">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
-          </div>
-          <h3>Honest Pricing</h3>
-          <p>No hidden fees or surprise charges. We quote fair prices up-front and explain exactly what needs to be done.</p>
-        </div>
-        <div class="why-card fade-up">
-          <div class="why-icon" aria-hidden="true">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>
-          </div>
-          <h3>Expert Mechanic</h3>
-          <p>Owner Tristan knows his way around every kind of vehicle &mdash; from routine maintenance to tough diagnostic jobs.</p>
-        </div>
-        <div class="why-card fade-up">
-          <div class="why-icon" aria-hidden="true">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
-          </div>
-          <h3>You Can Trust Us</h3>
-          <p>Local, owner-operated in Beaverton. We build our business on reputation and treat every vehicle like our own.</p>
-        </div>
-        <div class="why-card fade-up">
-          <div class="why-icon" aria-hidden="true">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
-          </div>
-          <h3>Service Area Coverage</h3>
-          <p>Beaverton, Portland, Hillsboro, Tigard, Lake Oswego, Tualatin, Aloha, Gresham, Milwaukie, and the full PDX metro.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- About -->
-  <section class="section about-section" id="about">
-    <div class="container">
-      <div class="section-header">
-        <span class="section-label">About</span>
-        <h2 class="section-title">Meet the Team Behind LT's</h2>
-        <p class="section-subtitle">A family-run, husband-and-wife business</p>
-      </div>
-      <div class="about-content fade-up">
-        <p>LT's Mobile Mechanics is a family-owned business run by Tristan and his wife. Tristan is the mechanic &mdash; the one under the hood with the tools and years of hands-on experience. His wife runs the behind-the-scenes side: scheduling, customer communication, and making sure every job gets the attention it deserves. Together, they built this business on a simple principle: get the job done right, at a fair price, and with honesty.</p>
-        <p>Whether you're dealing with a breakdown on a Saturday morning or need routine maintenance, you'll talk to people who actually care. Tristan approaches every repair with professionalism and care. He loves what he does and takes pride in keeping Portland area vehicles running smoothly &mdash; and his wife makes sure nothing falls through the cracks.</p>
-        <p>Based in Beaverton and serving the greater Portland metro, LT's Mobile Mechanics is your local, trusted mechanic who comes to you. No waiting rooms, no stale coffee &mdash; just expert service from a family business that treats every customer like a neighbor.</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- Reviews -->
-  <section class="section reviews-section" id="reviews">
-    <div class="container">
-      <div class="section-header">
-        <span class="section-label">Customer Reviews</span>
-        <h2 class="section-title">What Our Customers Say</h2>
-        <p class="section-subtitle">Real feedback from drivers across the Portland metro.</p>
-      </div>
-      <div class="reviews-grid">
-        <article class="review-card fade-up">
-          <div class="review-stars" aria-label="5 out of 5 stars">
-            <svg viewBox="0 0 24 24" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-            <svg viewBox="0 0 24 24" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-            <svg viewBox="0 0 24 24" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-            <svg viewBox="0 0 24 24" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-            <svg viewBox="0 0 24 24" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-          </div>
-          <span class="review-tag">Reasonable Price</span>
-          <p class="review-text">"You know the day, you're in a hurry, one million things to do, and your car won't start. Stranded in a parking lot in the rain after hours, Tristan appeared like a hero without hesitation."</p>
-          <div class="review-author">
-            <div class="review-avatar">R</div>
-            <div>
-              <div class="review-name">Renee</div>
-              <a href="https://share.google/kUYl7oR3Eut3ParPA" target="_blank" rel="noopener noreferrer" class="review-source">Google Reviews →</a>
+            <div class="hero-stat">
+              <div class="hero-stat-value">100%</div>
+              <div class="hero-stat-label">Mobile Service</div>
+            </div>
+            <div class="hero-stat">
+              <div class="hero-stat-value">PDX</div>
+              <div class="hero-stat-label">Locally Owned</div>
             </div>
           </div>
-        </article>
-        <article class="review-card fade-up">
-          <div class="review-stars" aria-label="5 out of 5 stars">
-            <svg viewBox="0 0 24 24" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-            <svg viewBox="0 0 24 24" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-            <svg viewBox="0 0 24 24" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-            <svg viewBox="0 0 24 24" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-            <svg viewBox="0 0 24 24" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-          </div>
-          <span class="review-tag">Great Price</span>
-          <p class="review-text">"Fixed my dad's brakes and rotors for a good price and was very professional. He also did an oil change and transmission work on my Mazda 6 for a fair price. Highly recommend."</p>
-          <div class="review-author">
-            <div class="review-avatar">S</div>
-            <div>
-              <div class="review-name">Santiago Akers</div>
-              <a href="https://share.google/kUYl7oR3Eut3ParPA" target="_blank" rel="noopener noreferrer" class="review-source">Google Reviews →</a>
-            </div>
-          </div>
-        </article>
-        <article class="review-card fade-up">
-          <div class="review-stars" aria-label="5 out of 5 stars">
-            <svg viewBox="0 0 24 24" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-            <svg viewBox="0 0 24 24" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-            <svg viewBox="0 0 24 24" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-            <svg viewBox="0 0 24 24" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-            <svg viewBox="0 0 24 24" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-          </div>
-          <span class="review-tag">Highly Recommend</span>
-          <p class="review-text">"Definitely calling Tristan again and keeping his card. He really knows his parts and is happy to work on my vehicle. I recommend LT's Mobile Mechanics to anyone in the Portland area."</p>
-          <div class="review-author">
-            <div class="review-avatar">V</div>
-            <div>
-              <div class="review-name">Verified Customer</div>
-              <a href="https://share.google/kUYl7oR3Eut3ParPA" target="_blank" rel="noopener noreferrer" class="review-source">Google Reviews →</a>
-            </div>
-          </div>
-        </article>
+        </div>
       </div>
-      <div class="reviews-cta fade-up">
-        <a href="https://share.google/kUYl7oR3Eut3ParPA" target="_blank" rel="noopener noreferrer" class="btn btn-outline">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-          Read all reviews on Google
-        </a>
-        <a href="https://share.google/kUYl7oR3Eut3ParPA" target="_blank" rel="noopener noreferrer" class="btn btn-gold">
-          Leave Us a Review
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>
-        </a>
-      </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- Service Area -->
-  <section class="section area-section" id="area">
-    <div class="container">
-      <div class="section-header">
-        <span class="section-label">Service Area</span>
-        <h2 class="section-title">Where We Serve</h2>
-        <p class="section-subtitle">LT's Mobile Mechanics covers the greater Portland metro area and beyond.</p>
+    <!-- Services -->
+    <section class="section services-section" id="services">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-label">What We Do</span>
+          <h2 class="section-title">Mobile Repair Services</h2>
+          <p class="section-subtitle">
+            Expert mechanical work at your location in Beaverton, Portland, and
+            surrounding areas.
+          </p>
+        </div>
+        <div class="services-grid">
+          {
+            services.map((s) => (
+              <a href={s.href} class="service-card fade-up">
+                <div class="service-icon" aria-hidden="true">
+                  {s.icon === "oil" && (
+                    <svg
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    >
+                      <path d="M12 2.69l5.66 5.66a8 8 0 1 1-11.31 0z" />
+                    </svg>
+                  )}
+                  {s.icon === "brake" && (
+                    <svg
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    >
+                      <circle cx="12" cy="12" r="10" />
+                      <circle cx="12" cy="12" r="4" />
+                      <line x1="4.93" y1="4.93" x2="9.17" y2="9.17" />
+                      <line x1="14.83" y1="14.83" x2="19.07" y2="19.07" />
+                      <line x1="14.83" y1="9.17" x2="19.07" y2="4.93" />
+                      <line x1="4.93" y1="19.07" x2="9.17" y2="14.83" />
+                    </svg>
+                  )}
+                  {s.icon === "diag" && (
+                    <svg
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    >
+                      <circle cx="11" cy="11" r="8" />
+                      <line x1="21" y1="21" x2="16.65" y2="16.65" />
+                    </svg>
+                  )}
+                  {s.icon === "spark" && (
+                    <svg
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    >
+                      <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2" />
+                    </svg>
+                  )}
+                  {s.icon === "battery" && (
+                    <svg
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    >
+                      <rect x="1" y="6" width="18" height="12" rx="2" />
+                      <line x1="23" y1="13" x2="23" y2="11" />
+                      <line x1="6" y1="10" x2="6" y2="14" />
+                      <line x1="10" y1="10" x2="10" y2="14" />
+                      <line x1="14" y1="12" x2="16" y2="12" />
+                    </svg>
+                  )}
+                  {s.icon === "wrench" && (
+                    <svg
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    >
+                      <path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z" />
+                    </svg>
+                  )}
+                  {s.icon === "check" && (
+                    <svg
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    >
+                      <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14" />
+                      <polyline points="22 4 12 14.01 9 11.01" />
+                    </svg>
+                  )}
+                  {s.icon === "alert" && (
+                    <svg
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    >
+                      <path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z" />
+                      <line x1="12" y1="9" x2="12" y2="13" />
+                      <line x1="12" y1="17" x2="12.01" y2="17" />
+                    </svg>
+                  )}
+                </div>
+                <h3>{s.title}</h3>
+                <p>{s.desc}</p>
+                <span class="service-link-arrow">
+                  Learn More
+                  <svg
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    aria-hidden="true"
+                  >
+                    <line x1="5" y1="12" x2="19" y2="12" />
+                    <polyline points="12 5 19 12 12 19" />
+                  </svg>
+                </span>
+              </a>
+            ))
+          }
+        </div>
       </div>
-      <div class="area-cities">
-        {areas.map(a => (
+    </section>
+
+    <!-- Why Us -->
+    <section class="section why-section">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-label">Why Choose Us</span>
+          <h2 class="section-title">The LT's Mobile Mechanics Difference</h2>
+          <p class="section-subtitle">
+            Honest, expert auto care that respects your time and your vehicle.
+          </p>
+        </div>
+        <div class="why-us-grid">
+          <div class="why-card fade-up">
+            <div class="why-icon" aria-hidden="true">
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                ><path
+                  d="M14 16H9m10 0h3v-3.15a1 1 0 0 0-.84-.99L16 11l-2.7-3.6a1 1 0 0 0-.8-.4H5.24a2 2 0 0 0-1.8 1.1l-.8 1.63A6 6 0 0 0 2 12.42V16h2"
+                ></path><circle cx="6.5" cy="16.5" r="2.5"></circle><circle
+                  cx="16.5"
+                  cy="16.5"
+                  r="2.5"></circle>
+              </svg>
+            </div>
+            <h3>Mobile Service</h3>
+            <p>
+              We come to you. No waiting rooms, no rides to arrange. We handle
+              repairs at your home, office, or wherever you're parked.
+            </p>
+          </div>
+          <div class="why-card fade-up">
+            <div class="why-icon" aria-hidden="true">
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                ><circle cx="12" cy="12" r="10"></circle><polyline
+                  points="12 6 12 12 16 14"></polyline>
+              </svg>
+            </div>
+            <h3>Flexible Hours</h3>
+            <p>
+              Open Mon through Saturday, 8am to 7pm. Give Tristan a call to
+              schedule a repair, quick service, or a diagnostic at your
+              location.
+            </p>
+          </div>
+          <div class="why-card fade-up">
+            <div class="why-icon" aria-hidden="true">
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                ><line x1="12" y1="1" x2="12" y2="23"></line><path
+                  d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path>
+              </svg>
+            </div>
+            <h3>Honest Pricing</h3>
+            <p>
+              No hidden fees or surprise charges. We quote fair prices up-front
+              and explain exactly what needs to be done.
+            </p>
+          </div>
+          <div class="why-card fade-up">
+            <div class="why-icon" aria-hidden="true">
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                ><path
+                  d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"
+                ></path>
+              </svg>
+            </div>
+            <h3>Expert Mechanic</h3>
+            <p>
+              Owner Tristan knows his way around every kind of vehicle &mdash;
+              from routine maintenance to tough diagnostic jobs.
+            </p>
+          </div>
+          <div class="why-card fade-up">
+            <div class="why-icon" aria-hidden="true">
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                ><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+              </svg>
+            </div>
+            <h3>You Can Trust Us</h3>
+            <p>
+              Local, owner-operated in Beaverton. We build our business on
+              reputation and treat every vehicle like our own.
+            </p>
+          </div>
+          <div class="why-card fade-up">
+            <div class="why-icon" aria-hidden="true">
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                ><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"
+                ></path><circle cx="12" cy="10" r="3"></circle>
+              </svg>
+            </div>
+            <h3>Service Area Coverage</h3>
+            <p>
+              Beaverton, Portland, Hillsboro, Tigard, Lake Oswego, Tualatin,
+              Aloha, Gresham, Milwaukie, and the full PDX metro.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- About -->
+    <section class="section about-section" id="about">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-label">About</span>
+          <h2 class="section-title">Meet the Team Behind LT's</h2>
+          <p class="section-subtitle">
+            A family-run, husband-and-wife business
+          </p>
+        </div>
+        <div class="about-grid">
+          <div class="about-image fade-up">
+            <img
+              src="/mechanic-photo.jpg"
+              alt="LT's Mobile Mechanics - Family Business"
+              loading="lazy"
+            />
+          </div>
+          <div class="about-content fade-up">
+            <p>
+              LT's Mobile Mechanics is a family-owned business run by Tristan
+              and his wife. Tristan is the mechanic &mdash; the one under the
+              hood with the tools and years of hands-on experience. His wife
+              runs the behind-the-scenes side: scheduling, customer
+              communication, and making sure every job gets the attention it
+              deserves. Together, they built this business on a simple
+              principle: get the job done right, at a fair price, and with
+              honesty.
+            </p>
+            <p>
+              Whether you're dealing with a breakdown on a Saturday morning or
+              need routine maintenance, you'll talk to people who actually care.
+              Tristan approaches every repair with professionalism and care. He
+              loves what he does and takes pride in keeping Portland area
+              vehicles running smoothly &mdash; and his wife makes sure nothing
+              falls through the cracks.
+            </p>
+            <p>
+              Based in Beaverton and serving the greater Portland metro, LT's
+              Mobile Mechanics is your local, trusted mechanic who comes to you.
+              No waiting rooms, no stale coffee &mdash; just expert service from
+              a family business that treats every customer like a neighbor.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Reviews -->
+    <section class="section reviews-section" id="reviews">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-label">Customer Reviews</span>
+          <h2 class="section-title">What Our Customers Say</h2>
+          <p class="section-subtitle">
+            Real feedback from drivers across the Portland metro.
+          </p>
+        </div>
+        <div class="reviews-grid">
+          <article class="review-card fade-up">
+            <div class="review-stars" aria-label="5 out of 5 stars">
+              <svg viewBox="0 0 24 24" aria-hidden="true"
+                ><polygon
+                  points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"
+                ></polygon>
+              </svg>
+              <svg viewBox="0 0 24 24" aria-hidden="true"
+                ><polygon
+                  points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"
+                ></polygon>
+              </svg>
+              <svg viewBox="0 0 24 24" aria-hidden="true"
+                ><polygon
+                  points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"
+                ></polygon>
+              </svg>
+              <svg viewBox="0 0 24 24" aria-hidden="true"
+                ><polygon
+                  points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"
+                ></polygon>
+              </svg>
+              <svg viewBox="0 0 24 24" aria-hidden="true"
+                ><polygon
+                  points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"
+                ></polygon>
+              </svg>
+            </div>
+            <span class="review-tag">Reasonable Price</span>
+            <p class="review-text">
+              "You know the day, you're in a hurry, one million things to do,
+              and your car won't start. Stranded in a parking lot in the rain
+              after hours, Tristan appeared like a hero without hesitation."
+            </p>
+            <div class="review-author">
+              <div class="review-avatar">R</div>
+              <div>
+                <div class="review-name">Renee</div>
+                <a
+                  href="https://share.google/kUYl7oR3Eut3ParPA"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="review-source">Google Reviews →</a
+                >
+              </div>
+            </div>
+          </article>
+          <article class="review-card fade-up">
+            <div class="review-stars" aria-label="5 out of 5 stars">
+              <svg viewBox="0 0 24 24" aria-hidden="true"
+                ><polygon
+                  points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"
+                ></polygon>
+              </svg>
+              <svg viewBox="0 0 24 24" aria-hidden="true"
+                ><polygon
+                  points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"
+                ></polygon>
+              </svg>
+              <svg viewBox="0 0 24 24" aria-hidden="true"
+                ><polygon
+                  points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"
+                ></polygon>
+              </svg>
+              <svg viewBox="0 0 24 24" aria-hidden="true"
+                ><polygon
+                  points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"
+                ></polygon>
+              </svg>
+              <svg viewBox="0 0 24 24" aria-hidden="true"
+                ><polygon
+                  points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"
+                ></polygon>
+              </svg>
+            </div>
+            <span class="review-tag">Great Price</span>
+            <p class="review-text">
+              "Fixed my dad's brakes and rotors for a good price and was very
+              professional. He also did an oil change and transmission work on
+              my Mazda 6 for a fair price. Highly recommend."
+            </p>
+            <div class="review-author">
+              <div class="review-avatar">S</div>
+              <div>
+                <div class="review-name">Santiago Akers</div>
+                <a
+                  href="https://share.google/kUYl7oR3Eut3ParPA"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="review-source">Google Reviews →</a
+                >
+              </div>
+            </div>
+          </article>
+          <article class="review-card fade-up">
+            <div class="review-stars" aria-label="5 out of 5 stars">
+              <svg viewBox="0 0 24 24" aria-hidden="true"
+                ><polygon
+                  points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"
+                ></polygon>
+              </svg>
+              <svg viewBox="0 0 24 24" aria-hidden="true"
+                ><polygon
+                  points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"
+                ></polygon>
+              </svg>
+              <svg viewBox="0 0 24 24" aria-hidden="true"
+                ><polygon
+                  points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"
+                ></polygon>
+              </svg>
+              <svg viewBox="0 0 24 24" aria-hidden="true"
+                ><polygon
+                  points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"
+                ></polygon>
+              </svg>
+              <svg viewBox="0 0 24 24" aria-hidden="true"
+                ><polygon
+                  points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"
+                ></polygon>
+              </svg>
+            </div>
+            <span class="review-tag">Highly Recommend</span>
+            <p class="review-text">
+              "Definitely calling Tristan again and keeping his card. He really
+              knows his parts and is happy to work on my vehicle. I recommend
+              LT's Mobile Mechanics to anyone in the Portland area."
+            </p>
+            <div class="review-author">
+              <div class="review-avatar">V</div>
+              <div>
+                <div class="review-name">Verified Customer</div>
+                <a
+                  href="https://share.google/kUYl7oR3Eut3ParPA"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="review-source">Google Reviews →</a
+                >
+              </div>
+            </div>
+          </article>
+        </div>
+        <div class="reviews-cta fade-up">
           <a
-            href={`/areas/${a.name.toLowerCase().replace(/ /g, '-')}/`}
-            class={`area-tag${a.primary ? ' primary' : ''}`}
-          >{a.name}</a>
-        ))}
-      </div>
-    </div>
-  </section>
-
-  <!-- Contact -->
-  <section class="section contact-section" id="contact">
-    <div class="container">
-      <div class="section-header">
-        <span class="section-label">Get in Touch</span>
-        <h2 class="section-title">Contact LT's Mobile Mechanics</h2>
-        <p class="section-subtitle">Call, text, email, or drop us a message &mdash; we answer quickly.</p>
-      </div>
-      <div class="contact-grid">
-        <div class="contact-info-card fade-up">
-          <h3>Quick Contact</h3>
-          <div class="contact-method">
-            <div class="contact-method-icon" aria-hidden="true">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-            </div>
-            <div>
-              <div class="contact-method-label">Phone</div>
-              <a href="tel:+19715340360" class="contact-method-value">(971) 534-0360</a>
-            </div>
-          </div>
-          <div class="contact-method">
-            <div class="contact-method-icon" aria-hidden="true">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
-            </div>
-            <div>
-              <div class="contact-method-label">Email</div>
-              <a href="mailto:ltsmobilepdx@gmail.com" class="contact-method-value">ltsmobilepdx@gmail.com</a>
-            </div>
-          </div>
-          <div class="contact-method">
-            <div class="contact-method-icon" aria-hidden="true">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
-            </div>
-            <div>
-              <div class="contact-method-label">Based In</div>
-              <div class="contact-method-value">Beaverton, OR 97005</div>
-            </div>
-          </div>
-          <div class="contact-method">
-            <div class="contact-method-icon" aria-hidden="true">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
-            </div>
-            <div>
-              <div class="contact-method-label">Hours</div>
-              <div class="contact-method-value">Mon&ndash;Sat, 8am&ndash;7pm</div>
-            </div>
-          </div>
-          <div class="contact-social">
-            <a href="https://www.facebook.com/p/LTs-Mobile-Mechanics-61582489155322/" class="social-link" target="_blank" rel="noopener noreferrer">Facebook</a>
-            <a href="https://www.instagram.com/lts_mobile_mechanics/" class="social-link" target="_blank" rel="noopener noreferrer">Instagram</a>
-            <a href="https://nextdoor.com/pages/lts-mobile-mechanics-kettering-oh/" class="social-link" target="_blank" rel="noopener noreferrer">Nextdoor</a>
-            <a href="https://share.google/kUYl7oR3Eut3ParPA" class="social-link" target="_blank" rel="noopener noreferrer">Google</a>
-          </div>
-        </div>
-
-        <div class="contact-form-card fade-up">
-          <h3>Send a Message</h3>
-          <p style="color:var(--text-2);font-size:14px;margin-top:8px;">Tell us what is going on and we will respond with a quote.</p>
-          <form class="contact-form" action="https://formsubmit.co/ltsmobilepdx@gmail.com" method="POST">
-            <div class="form-grid">
-              <div class="form-group">
-                <label for="name">Name</label>
-                <input type="text" id="name" name="name" required autocomplete="name">
-              </div>
-              <div class="form-group">
-                <label for="phone">Phone</label>
-                <input type="tel" id="phone" name="phone" autocomplete="tel">
-              </div>
-              <div class="form-group full">
-                <label for="email">Email</label>
-                <input type="email" id="email" name="email" required autocomplete="email">
-              </div>
-              <div class="form-group full">
-                <label for="service">Service Needed</label>
-                <select id="service" name="service">
-                  <option>Oil Change</option>
-                  <option>Brake Repair</option>
-                  <option>Diagnostics</option>
-                  <option>Battery &amp; Alternator</option>
-                  <option>Spark Plugs &amp; Ignition</option>
-                  <option>Suspension &amp; Steering</option>
-                  <option>Pre-Purchase Inspection</option>
-                  <option>Emergency Roadside</option>
-                  <option>Other / Not Sure</option>
-                </select>
-              </div>
-              <div class="form-group full">
-                <label for="message">Message</label>
-                <textarea id="message" name="message" rows="5" required></textarea>
-              </div>
-              <input type="hidden" name="_captcha" value="false">
-              <input type="hidden" name="_subject" value="New inquiry from ltsmobilemechanics.com">
-              <button type="submit" class="form-submit btn btn-gold">
-                Send Message
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
-              </button>
-            </div>
-          </form>
+            href="https://share.google/kUYl7oR3Eut3ParPA"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="btn btn-outline"
+          >
+            <svg
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              aria-hidden="true"
+              ><polygon
+                points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"
+              ></polygon>
+            </svg>
+            Read all reviews on Google
+          </a>
+          <a
+            href="https://share.google/kUYl7oR3Eut3ParPA"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="btn btn-gold"
+          >
+            Leave Us a Review
+            <svg
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              aria-hidden="true"
+              ><line x1="7" y1="17" x2="17" y2="7"></line><polyline
+                points="7 7 17 7 17 17"></polyline>
+            </svg>
+          </a>
         </div>
       </div>
-    </div>
-  </section>
-</main>
+    </section>
+
+    <!-- Service Area -->
+    <section class="section area-section" id="area">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-label">Service Area</span>
+          <h2 class="section-title">Where We Serve</h2>
+          <p class="section-subtitle">
+            LT's Mobile Mechanics covers the greater Portland metro area and
+            beyond.
+          </p>
+        </div>
+        <div class="area-cities">
+          {
+            areas.map((a) => (
+              <a
+                href={`/areas/${a.name.toLowerCase().replace(/ /g, "-")}/`}
+                class={`area-tag${a.primary ? " primary" : ""}`}
+              >
+                {a.name}
+              </a>
+            ))
+          }
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section class="section contact-section" id="contact">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-label">Get in Touch</span>
+          <h2 class="section-title">Contact LT's Mobile Mechanics</h2>
+          <p class="section-subtitle">
+            Call, text, email, or drop us a message &mdash; we answer quickly.
+          </p>
+        </div>
+        <div class="contact-grid">
+          <div class="contact-info-card fade-up">
+            <h3>Quick Contact</h3>
+            <div class="contact-method">
+              <div class="contact-method-icon" aria-hidden="true">
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  ><path
+                    d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"
+                  ></path>
+                </svg>
+              </div>
+              <div>
+                <div class="contact-method-label">Phone</div>
+                <a href="tel:+19715340360" class="contact-method-value"
+                  >(971) 534-0360</a
+                >
+              </div>
+            </div>
+            <div class="contact-method">
+              <div class="contact-method-icon" aria-hidden="true">
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  ><path
+                    d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"
+                  ></path><polyline points="22,6 12,13 2,6"></polyline>
+                </svg>
+              </div>
+              <div>
+                <div class="contact-method-label">Email</div>
+                <a
+                  href="mailto:ltsmobilepdx@gmail.com"
+                  class="contact-method-value">ltsmobilepdx@gmail.com</a
+                >
+              </div>
+            </div>
+            <div class="contact-method">
+              <div class="contact-method-icon" aria-hidden="true">
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  ><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"
+                  ></path><circle cx="12" cy="10" r="3"></circle>
+                </svg>
+              </div>
+              <div>
+                <div class="contact-method-label">Based In</div>
+                <div class="contact-method-value">Beaverton, OR 97005</div>
+              </div>
+            </div>
+            <div class="contact-method">
+              <div class="contact-method-icon" aria-hidden="true">
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  ><circle cx="12" cy="12" r="10"></circle><polyline
+                    points="12 6 12 12 16 14"></polyline>
+                </svg>
+              </div>
+              <div>
+                <div class="contact-method-label">Hours</div>
+                <div class="contact-method-value">
+                  Mon&ndash;Sat, 8am&ndash;7pm
+                </div>
+              </div>
+            </div>
+            <div class="contact-social">
+              <a
+                href="https://www.facebook.com/p/LTs-Mobile-Mechanics-61582489155322/"
+                class="social-link"
+                target="_blank"
+                rel="noopener noreferrer">Facebook</a
+              >
+              <a
+                href="https://www.instagram.com/lts_mobile_mechanics/"
+                class="social-link"
+                target="_blank"
+                rel="noopener noreferrer">Instagram</a
+              >
+              <a
+                href="https://nextdoor.com/pages/lts-mobile-mechanics-kettering-oh/"
+                class="social-link"
+                target="_blank"
+                rel="noopener noreferrer">Nextdoor</a
+              >
+              <a
+                href="https://share.google/kUYl7oR3Eut3ParPA"
+                class="social-link"
+                target="_blank"
+                rel="noopener noreferrer">Google</a
+              >
+            </div>
+          </div>
+
+          <div class="contact-form-card fade-up">
+            <h3>Send a Message</h3>
+            <p style="color:var(--text-2);font-size:14px;margin-top:8px;">
+              Tell us what is going on and we will respond with a quote.
+            </p>
+            <form
+              class="contact-form"
+              action="https://formsubmit.co/ltsmobilepdx@gmail.com"
+              method="POST"
+            >
+              <div class="form-grid">
+                <div class="form-group">
+                  <label for="name">Name</label>
+                  <input
+                    type="text"
+                    id="name"
+                    name="name"
+                    required
+                    autocomplete="name"
+                  />
+                </div>
+                <div class="form-group">
+                  <label for="phone">Phone</label>
+                  <input
+                    type="tel"
+                    id="phone"
+                    name="phone"
+                    autocomplete="tel"
+                  />
+                </div>
+                <div class="form-group full">
+                  <label for="email">Email</label>
+                  <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    required
+                    autocomplete="email"
+                  />
+                </div>
+                <div class="form-group full">
+                  <label for="service">Service Needed</label>
+                  <select id="service" name="service">
+                    <option>Oil Change</option>
+                    <option>Brake Repair</option>
+                    <option>Diagnostics</option>
+                    <option>Battery &amp; Alternator</option>
+                    <option>Spark Plugs &amp; Ignition</option>
+                    <option>Suspension &amp; Steering</option>
+                    <option>Pre-Purchase Inspection</option>
+                    <option>Emergency Roadside</option>
+                    <option>Other / Not Sure</option>
+                  </select>
+                </div>
+                <div class="form-group full">
+                  <label for="message">Message</label>
+                  <textarea id="message" name="message" rows="5" required
+                  ></textarea>
+                </div>
+                <input type="hidden" name="_captcha" value="false" />
+                <input
+                  type="hidden"
+                  name="_subject"
+                  value="New inquiry from ltsmobilemechanics.com"
+                />
+                <button type="submit" class="form-submit btn btn-gold">
+                  Send Message
+                  <svg
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    aria-hidden="true"
+                    ><line x1="22" y1="2" x2="11" y2="13"></line><polygon
+                      points="22 2 15 22 11 13 2 9 22 2"></polygon>
+                  </svg>
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
 </Layout>
