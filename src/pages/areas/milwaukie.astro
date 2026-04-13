@@ -13,7 +13,7 @@ const schema = {
   "@type": "LocalBusiness",
   "name": `LT's Mobile Mechanics - ${city}`,
   "image": `${SITE}/og-image.png`,
-  "description": `Mobile mechanic services in ${city}, Oregon. Professional auto repair, diagnostics, and maintenance delivered to your location. Available 24/7.`,
+  "description": `Mobile mechanic services in ${city}, Oregon. Professional auto repair, diagnostics, and maintenance delivered to your location. Open Mon–Sat, 8am–7pm.`,
   "address": {
     "@type": "PostalAddress",
     "streetAddress": "4041 SW Hall Blvd",
@@ -28,9 +28,9 @@ const schema = {
   "areaServed": { "@type": "City", "name": `${city}, Oregon` },
   "openingHoursSpecification": {
     "@type": "OpeningHoursSpecification",
-    "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],
-    "opens": "00:00",
-    "closes": "23:59"
+    "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"],
+    "opens": "08:00",
+    "closes": "19:00"
   },
   "priceRange": "$$"
 };
@@ -47,7 +47,7 @@ const schema = {
     <section class="article-hero">
       <div class="container">
         <h1>Mobile Mechanic in <em>{city}</em>, Oregon</h1>
-        <p class="hero-subtitle">Professional auto repair that comes to you — 24/7.</p>
+        <p class="hero-subtitle">Professional auto repair that comes to you — Mon–Sat, 8am–7pm.</p>
       </div>
     </section>
 
@@ -59,7 +59,7 @@ const schema = {
           </p>
 
           <p>
-            Milwaukie has a special charm that attracts residents who value quality and community. The historic main street has seen a real revival in recent years, and the nearby Orange Line keeps people connected across the region. At LTs Mobile Mechanics, we understand what Milwaukie residents need, because we serve this community with the same care and attention that locals expect from their service providers. Tristan Matthew and his team have built a reputation on honest work and genuine expertise, and that's what you get every time you call.
+            Milwaukie has a special charm that attracts residents who value quality and community. The historic main street has seen a real revival in recent years, and the nearby Orange Line keeps people connected across the region. At LTs Mobile Mechanics, we understand what Milwaukie residents need, because we serve this community with the same care and attention that locals expect from their service providers. Tristan and his team have built a reputation on honest work and genuine expertise, and that's what you get every time you call.
           </p>
 
           <p>
@@ -71,7 +71,7 @@ const schema = {
           </p>
 
           <p>
-            One of the biggest advantages of mobile mechanic service is convenience. If you need your vehicle worked on, you shouldn't have to rearrange your entire day around a repair shop's hours. LTs Mobile Mechanics operates 24/7 because we know emergencies don't follow a schedule. Dead battery on a holiday? Brake issue before an important drive? We're here to help, anytime, day or night.
+            One of the biggest advantages of mobile mechanic service is convenience. If you need your vehicle worked on, you shouldn't have to rearrange your entire day around a repair shop's hours. LTs Mobile Mechanics is open Mon–Sat from 8 AM to 7 PM, including evenings and Saturdays, so service fits into your real schedule. Dead battery before the workday? Brake issue to address before the weekend? Give us a call during business hours and we're here to help.
           </p>
 
           <p>
@@ -83,7 +83,7 @@ const schema = {
 
     <ArticleCTA
       heading={`Need a Mobile Mechanic in ${city}?`}
-      subheading={`Call LT's Mobile Mechanics. We come to you anywhere in ${city} — any time, day or night.`}
+      subheading={`Call LT's Mobile Mechanics. We come to you anywhere in ${city} — Mon–Sat, 8am–7pm.`}
     />
 
     <RelatedServices heading={`Our Services in ${city}`} />

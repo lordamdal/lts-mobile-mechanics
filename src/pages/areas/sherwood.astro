@@ -13,7 +13,7 @@ const schema = {
   "@type": "LocalBusiness",
   "name": `LT's Mobile Mechanics - ${city}`,
   "image": `${SITE}/og-image.png`,
-  "description": `Mobile mechanic services in ${city}, Oregon. Professional auto repair, diagnostics, and maintenance delivered to your location. Available 24/7.`,
+  "description": `Mobile mechanic services in ${city}, Oregon. Professional auto repair, diagnostics, and maintenance delivered to your location. Open Mon–Sat, 8am–7pm.`,
   "address": {
     "@type": "PostalAddress",
     "streetAddress": "4041 SW Hall Blvd",
@@ -28,9 +28,9 @@ const schema = {
   "areaServed": { "@type": "City", "name": `${city}, Oregon` },
   "openingHoursSpecification": {
     "@type": "OpeningHoursSpecification",
-    "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],
-    "opens": "00:00",
-    "closes": "23:59"
+    "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"],
+    "opens": "08:00",
+    "closes": "19:00"
   },
   "priceRange": "$$"
 };
@@ -47,7 +47,7 @@ const schema = {
     <section class="article-hero">
       <div class="container">
         <h1>Mobile Mechanic in <em>{city}</em>, Oregon</h1>
-        <p class="hero-subtitle">Professional auto repair that comes to you — 24/7.</p>
+        <p class="hero-subtitle">Professional auto repair that comes to you — Mon–Sat, 8am–7pm.</p>
       </div>
     </section>
 
@@ -71,11 +71,11 @@ const schema = {
           </p>
 
           <p>
-            Sherwood residents value quality service and honest dealing, and that's exactly what LTs Mobile Mechanics delivers. We believe in transparent communication about what we find, fair pricing without hidden charges or unnecessary upselling, and workmanship that you can rely on. Tristan Matthew and his team have built their reputation on integrity, and we apply those same standards to every job we do in Sherwood. Your vehicle deserves quality care, and that's what we provide.
+            Sherwood residents value quality service and honest dealing, and that's exactly what LTs Mobile Mechanics delivers. We believe in transparent communication about what we find, fair pricing without hidden charges or unnecessary upselling, and workmanship that you can rely on. Tristan and his team have built their reputation on integrity, and we apply those same standards to every job we do in Sherwood. Your vehicle deserves quality care, and that's what we provide.
           </p>
 
           <p>
-            Vehicle emergencies don't respect business hours, which is why LTs Mobile Mechanics operates 24/7. Whether you need help on a weekend, a holiday, or in the middle of the night, we're available. A dead battery before an important drive? Brake issue that needs immediate attention? Emergency roadside situation? Call us anytime, and we'll dispatch a professional mechanic to help you get back on the road safely.
+            Vehicle issues can hit at the worst times, which is why LTs Mobile Mechanics keeps extended hours — Mon–Sat, 8 AM to 7 PM — including evenings and Saturdays. A dead battery before an important drive? Brake issue that needs attention? Roadside situation during the week? Call us during business hours and we'll dispatch a professional mechanic to help you get back on the road safely.
           </p>
         </div>
       </article>
@@ -83,7 +83,7 @@ const schema = {
 
     <ArticleCTA
       heading={`Need a Mobile Mechanic in ${city}?`}
-      subheading={`Call LT's Mobile Mechanics. We come to you anywhere in ${city} — any time, day or night.`}
+      subheading={`Call LT's Mobile Mechanics. We come to you anywhere in ${city} — Mon–Sat, 8am–7pm.`}
     />
 
     <RelatedServices heading={`Our Services in ${city}`} />

@@ -13,7 +13,7 @@ const schema = {
   "@type": "LocalBusiness",
   "name": `LT's Mobile Mechanics - ${city}`,
   "image": `${SITE}/og-image.png`,
-  "description": `Mobile mechanic services in ${city}, Oregon. Professional auto repair, diagnostics, and maintenance delivered to your location. Available 24/7.`,
+  "description": `Mobile mechanic services in ${city}, Oregon. Professional auto repair, diagnostics, and maintenance delivered to your location. Open Mon–Sat, 8am–7pm.`,
   "address": {
     "@type": "PostalAddress",
     "streetAddress": "4041 SW Hall Blvd",
@@ -28,9 +28,9 @@ const schema = {
   "areaServed": { "@type": "City", "name": `${city}, Oregon` },
   "openingHoursSpecification": {
     "@type": "OpeningHoursSpecification",
-    "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],
-    "opens": "00:00",
-    "closes": "23:59"
+    "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"],
+    "opens": "08:00",
+    "closes": "19:00"
   },
   "priceRange": "$$"
 };
@@ -47,7 +47,7 @@ const schema = {
     <section class="article-hero">
       <div class="container">
         <h1>Mobile Mechanic in <em>{city}</em>, Oregon</h1>
-        <p class="hero-subtitle">Professional auto repair that comes to you — 24/7.</p>
+        <p class="hero-subtitle">Professional auto repair that comes to you — Mon–Sat, 8am–7pm.</p>
       </div>
     </section>
 
@@ -56,7 +56,7 @@ const schema = {
         <div class="article-content fade-up">
           <p>Hillsboro is a city of tech workers, families, and professionals who value efficiency. Whether you're near the Intel campus, living in Orenco Station, working downtown Hillsboro, or parked somewhere along TV Highway, LTs Mobile Mechanics brings professional auto repair to your location. We don't expect you to hunt for a mechanic shop. We come to you.</p>
 
-          <p>LTs Mobile Mechanics serves Hillsboro's growing communities with the same commitment to quality that built this area. Owner Tristan Matthew understands what Hillsboro drivers need: reliable service that fits into busy schedules, honest mechanics who explain what they find, and the flexibility to work when you need it. We're available 24/7 because your vehicle doesn't break on a 9-to-5 schedule.</p>
+          <p>LTs Mobile Mechanics serves Hillsboro's growing communities with the same commitment to quality that built this area. Owner Tristan understands what Hillsboro drivers need: reliable service that fits into busy schedules, honest mechanics who explain what they find, and the flexibility to work when you need it. We're open Mon–Sat, 8am–7pm, including evenings and Saturdays, so your service doesn't have to fit a 9-to-5 schedule.</p>
 
           <p>The Intel campus area and surrounding tech corridor mean Hillsboro professionals need mechanics who respect their time. That's our specialty. Need an oil change before you head to work? Done. Battery dying in the Orenco parking lot? We'll help. Pre-purchase inspection before you buy that used vehicle? We'll give you the straight story. Brake work? Spark plug service? Suspension issues? Diagnostic trouble that needs sorting? We handle all of it, wherever you are in Hillsboro.</p>
 
@@ -66,14 +66,14 @@ const schema = {
 
           <p>Hillsboro's rapid growth means lots of newer drivers and transplants who need someone they can trust with their vehicles. That's where we come in. We provide honest diagnostics. We don't upsell repairs you don't need. We explain what we find and let you make informed decisions about your vehicle's care. That approach builds trust, and it's why Hillsboro drivers call us back.</p>
 
-          <p>Oil changes, brake repair, spark plug service, battery and alternator work, suspension and steering fixes, diagnostics, pre-purchase inspections, and 24/7 emergency roadside assistance. Whatever your Hillsboro vehicle needs, call LTs Mobile Mechanics at (971) 534-0360 to schedule service or get help fast.</p>
+          <p>Oil changes, brake repair, spark plug service, battery and alternator work, suspension and steering fixes, diagnostics, pre-purchase inspections, and mobile emergency roadside assistance during business hours. Whatever your Hillsboro vehicle needs, call LTs Mobile Mechanics at (971) 534-0360 to schedule service or get help fast.</p>
         </div>
       </article>
     </section>
 
     <ArticleCTA
       heading={`Need a Mobile Mechanic in ${city}?`}
-      subheading={`Call LT's Mobile Mechanics. We come to you anywhere in ${city} — any time, day or night.`}
+      subheading={`Call LT's Mobile Mechanics. We come to you anywhere in ${city} — Mon–Sat, 8am–7pm.`}
     />
 
     <RelatedServices heading={`Our Services in ${city}`} />

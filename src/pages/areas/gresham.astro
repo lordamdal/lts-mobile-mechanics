@@ -13,7 +13,7 @@ const schema = {
   "@type": "LocalBusiness",
   "name": `LT's Mobile Mechanics - ${city}`,
   "image": `${SITE}/og-image.png`,
-  "description": `Mobile mechanic services in ${city}, Oregon. Professional auto repair, diagnostics, and maintenance delivered to your location. Available 24/7.`,
+  "description": `Mobile mechanic services in ${city}, Oregon. Professional auto repair, diagnostics, and maintenance delivered to your location. Open Mon–Sat, 8am–7pm.`,
   "address": {
     "@type": "PostalAddress",
     "streetAddress": "4041 SW Hall Blvd",
@@ -28,9 +28,9 @@ const schema = {
   "areaServed": { "@type": "City", "name": `${city}, Oregon` },
   "openingHoursSpecification": {
     "@type": "OpeningHoursSpecification",
-    "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],
-    "opens": "00:00",
-    "closes": "23:59"
+    "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"],
+    "opens": "08:00",
+    "closes": "19:00"
   },
   "priceRange": "$$"
 };
@@ -47,7 +47,7 @@ const schema = {
     <section class="article-hero">
       <div class="container">
         <h1>Mobile Mechanic in <em>{city}</em>, Oregon</h1>
-        <p class="hero-subtitle">Professional auto repair that comes to you — 24/7.</p>
+        <p class="hero-subtitle">Professional auto repair that comes to you — Mon–Sat, 8am–7pm.</p>
       </div>
     </section>
 
@@ -59,7 +59,7 @@ const schema = {
           </p>
 
           <p>
-            Gresham is a vibrant community just east of Portland, and we know the area well. From the bustling downtown streets to the neighborhoods around Mt. Hood Community College, we're committed to serving Gresham residents with the same dedication and expertise Tristan Matthew has built his reputation on. Our mobile service model means no more waiting in crowded repair shops or dealing with the inconvenience of dropping off your vehicle.
+            Gresham is a vibrant community just east of Portland, and we know the area well. From the bustling downtown streets to the neighborhoods around Mt. Hood Community College, we're committed to serving Gresham residents with the same dedication and expertise Tristan has built his reputation on. Our mobile service model means no more waiting in crowded repair shops or dealing with the inconvenience of dropping off your vehicle.
           </p>
 
           <p>
@@ -71,7 +71,7 @@ const schema = {
           </p>
 
           <p>
-            The Gresham Farmers Market, the local parks, and the thriving business community show that Gresham is a place where people value quality service and convenience. That's exactly what LTs Mobile Mechanics provides. We're available around the clock because we understand that vehicle problems don't wait for business hours. Whether you're stuck with a dead battery on a Sunday morning or need to get your vehicle road-ready before a long drive, we've got you covered.
+            The Gresham Farmers Market, the local parks, and the thriving business community show that Gresham is a place where people value quality service and convenience. That's exactly what LTs Mobile Mechanics provides. We keep extended hours — Mon–Sat, 8 AM to 7 PM — because we understand that vehicle problems shouldn't derail your week. Whether you need help on a Saturday morning or want to get your vehicle road-ready before a long drive, we've got you covered.
           </p>
 
           <p>
@@ -83,7 +83,7 @@ const schema = {
 
     <ArticleCTA
       heading={`Need a Mobile Mechanic in ${city}?`}
-      subheading={`Call LT's Mobile Mechanics. We come to you anywhere in ${city} — any time, day or night.`}
+      subheading={`Call LT's Mobile Mechanics. We come to you anywhere in ${city} — Mon–Sat, 8am–7pm.`}
     />
 
     <RelatedServices heading={`Our Services in ${city}`} />

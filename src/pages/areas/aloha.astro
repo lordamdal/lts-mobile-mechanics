@@ -13,7 +13,7 @@ const schema = {
   "@type": "LocalBusiness",
   "name": `LT's Mobile Mechanics - ${city}`,
   "image": `${SITE}/og-image.png`,
-  "description": `Mobile mechanic services in ${city}, Oregon. Professional auto repair, diagnostics, and maintenance delivered to your location. Available 24/7.`,
+  "description": `Mobile mechanic services in ${city}, Oregon. Professional auto repair, diagnostics, and maintenance delivered to your location. Open Mon–Sat, 8am–7pm.`,
   "address": {
     "@type": "PostalAddress",
     "streetAddress": "4041 SW Hall Blvd",
@@ -28,9 +28,9 @@ const schema = {
   "areaServed": { "@type": "City", "name": `${city}, Oregon` },
   "openingHoursSpecification": {
     "@type": "OpeningHoursSpecification",
-    "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],
-    "opens": "00:00",
-    "closes": "23:59"
+    "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"],
+    "opens": "08:00",
+    "closes": "19:00"
   },
   "priceRange": "$$"
 };
@@ -47,7 +47,7 @@ const schema = {
     <section class="article-hero">
       <div class="container">
         <h1>Mobile Mechanic in <em>{city}</em>, Oregon</h1>
-        <p class="hero-subtitle">Professional auto repair that comes to you — 24/7.</p>
+        <p class="hero-subtitle">Professional auto repair that comes to you — Mon–Sat, 8am–7pm.</p>
       </div>
     </section>
 
@@ -56,7 +56,7 @@ const schema = {
         <div class="article-content fade-up">
           <p>Aloha is a community with real heart. It's the kind of place where neighbors know neighbors, where families have roots, where people value community above all else. Whether you're along TV Highway, living in the 185th corridor neighborhoods, or settled in the quiet residential areas that define Aloha, LTs Mobile Mechanics is your local mechanic. We understand Aloha's community values, and we operate with the same integrity and care.</p>
 
-          <p>LTs Mobile Mechanics serves Aloha as part of the extended Portland metro area, but with a special understanding of Aloha's character. Owner Tristan Matthew built this business on community trust and reliable service, values that resonate deeply in Aloha. Your vehicle is important to your family and your life, and we treat it with the respect it deserves. We show up ready to work, ready to listen, and ready to serve Aloha residents with professionalism and expertise.</p>
+          <p>LTs Mobile Mechanics serves Aloha as part of the extended Portland metro area, but with a special understanding of Aloha's character. Owner Tristan built this business on community trust and reliable service, values that resonate deeply in Aloha. Your vehicle is important to your family and your life, and we treat it with the respect it deserves. We show up ready to work, ready to listen, and ready to serve Aloha residents with professionalism and expertise.</p>
 
           <p>Aloha sits in a unique geographic position between Beaverton and Hillsboro, serving as a bridge community with its own distinct identity. TV Highway brings commerce and activity. The 185th corridor supports neighborhoods and local businesses. The residential areas offer peace and community. Through all these parts of Aloha, LTs Mobile Mechanics provides the auto service that keeps vehicles running and keeps communities strong. Oil change at your home? We're there. Brake work before a family trip? Done. Diagnostic mystery that needs solving? We'll figure it out.</p>
 
@@ -66,14 +66,14 @@ const schema = {
 
           <p>The community feel of Aloha means word of mouth matters. Neighbors talk. Friends recommend. We've earned Aloha's trust through years of professional service and genuine care for the vehicles and people we serve. From emergency roadside help to pre-purchase inspections, from routine maintenance to complex diagnostics, LTs Mobile Mechanics has built a reputation for quality in Aloha.</p>
 
-          <p>Oil changes, brake service, spark plug replacement, battery and alternator work, suspension and steering fixes, diagnostic expertise, pre-purchase inspections, and 24/7 emergency roadside assistance. Whatever your Aloha vehicle needs, call LTs Mobile Mechanics at (971) 534-0360. We're here to serve your community with excellence.</p>
+          <p>Oil changes, brake service, spark plug replacement, battery and alternator work, suspension and steering fixes, diagnostic expertise, pre-purchase inspections, and mobile emergency roadside assistance during business hours. Whatever your Aloha vehicle needs, call LTs Mobile Mechanics at (971) 534-0360. We're here to serve your community with excellence.</p>
         </div>
       </article>
     </section>
 
     <ArticleCTA
       heading={`Need a Mobile Mechanic in ${city}?`}
-      subheading={`Call LT's Mobile Mechanics. We come to you anywhere in ${city} — any time, day or night.`}
+      subheading={`Call LT's Mobile Mechanics. We come to you anywhere in ${city} — Mon–Sat, 8am–7pm.`}
     />
 
     <RelatedServices heading={`Our Services in ${city}`} />

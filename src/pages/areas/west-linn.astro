@@ -13,7 +13,7 @@ const schema = {
   "@type": "LocalBusiness",
   "name": `LT's Mobile Mechanics - ${city}`,
   "image": `${SITE}/og-image.png`,
-  "description": `Mobile mechanic services in ${city}, Oregon. Professional auto repair, diagnostics, and maintenance delivered to your location. Available 24/7.`,
+  "description": `Mobile mechanic services in ${city}, Oregon. Professional auto repair, diagnostics, and maintenance delivered to your location. Open Mon–Sat, 8am–7pm.`,
   "address": {
     "@type": "PostalAddress",
     "streetAddress": "4041 SW Hall Blvd",
@@ -28,9 +28,9 @@ const schema = {
   "areaServed": { "@type": "City", "name": `${city}, Oregon` },
   "openingHoursSpecification": {
     "@type": "OpeningHoursSpecification",
-    "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],
-    "opens": "00:00",
-    "closes": "23:59"
+    "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"],
+    "opens": "08:00",
+    "closes": "19:00"
   },
   "priceRange": "$$"
 };
@@ -47,7 +47,7 @@ const schema = {
     <section class="article-hero">
       <div class="container">
         <h1>Mobile Mechanic in <em>{city}</em>, Oregon</h1>
-        <p class="hero-subtitle">Professional auto repair that comes to you — 24/7.</p>
+        <p class="hero-subtitle">Professional auto repair that comes to you — Mon–Sat, 8am–7pm.</p>
       </div>
     </section>
 
@@ -71,11 +71,11 @@ const schema = {
           </p>
 
           <p>
-            West Linn residents are discerning about the services they use, and we respect that. We pride ourselves on honest communication, fair pricing, and quality workmanship. No upselling, no unnecessary repairs, just professional advice on what your vehicle actually needs. Tristan Matthew and his team stand behind every repair we perform, and we're committed to keeping your vehicle running smoothly.
+            West Linn residents are discerning about the services they use, and we respect that. We pride ourselves on honest communication, fair pricing, and quality workmanship. No upselling, no unnecessary repairs, just professional advice on what your vehicle actually needs. Tristan and his team stand behind every repair we perform, and we're committed to keeping your vehicle running smoothly.
           </p>
 
           <p>
-            Emergency situations don't wait for convenient hours. That's why LTs Mobile Mechanics operates 24/7. Dead battery on a Sunday? Brake warning light on a holiday evening? We're here to help, whenever you need us. Call us anytime, and we'll get you back on the road with the quality service you deserve.
+            Emergency situations rarely happen at a convenient moment. That's why LTs Mobile Mechanics stays open Mon–Sat with hours until 7 PM. Dead battery mid-week? Brake warning light on a Saturday morning? We're here to help during business hours. Call us during our hours and we'll get you back on the road with the quality service you deserve.
           </p>
         </div>
       </article>
@@ -83,7 +83,7 @@ const schema = {
 
     <ArticleCTA
       heading={`Need a Mobile Mechanic in ${city}?`}
-      subheading={`Call LT's Mobile Mechanics. We come to you anywhere in ${city} — any time, day or night.`}
+      subheading={`Call LT's Mobile Mechanics. We come to you anywhere in ${city} — Mon–Sat, 8am–7pm.`}
     />
 
     <RelatedServices heading={`Our Services in ${city}`} />

@@ -13,7 +13,7 @@ const schema = {
   "@type": "LocalBusiness",
   "name": `LT's Mobile Mechanics - ${city}`,
   "image": `${SITE}/og-image.png`,
-  "description": `Mobile mechanic services in ${city}, Oregon. Professional auto repair, diagnostics, and maintenance delivered to your location. Available 24/7.`,
+  "description": `Mobile mechanic services in ${city}, Oregon. Professional auto repair, diagnostics, and maintenance delivered to your location. Open Mon–Sat, 8am–7pm.`,
   "address": {
     "@type": "PostalAddress",
     "streetAddress": "4041 SW Hall Blvd",
@@ -28,9 +28,9 @@ const schema = {
   "areaServed": { "@type": "City", "name": `${city}, Oregon` },
   "openingHoursSpecification": {
     "@type": "OpeningHoursSpecification",
-    "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],
-    "opens": "00:00",
-    "closes": "23:59"
+    "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"],
+    "opens": "08:00",
+    "closes": "19:00"
   },
   "priceRange": "$$"
 };
@@ -47,7 +47,7 @@ const schema = {
     <section class="article-hero">
       <div class="container">
         <h1>Mobile Mechanic in <em>{city}</em>, Oregon</h1>
-        <p class="hero-subtitle">Professional auto repair that comes to you — 24/7.</p>
+        <p class="hero-subtitle">Professional auto repair that comes to you — Mon–Sat, 8am–7pm.</p>
       </div>
     </section>
 
@@ -56,7 +56,7 @@ const schema = {
         <div class="article-content fade-up">
           <p>When your car needs attention in Beaverton, you don't have to hunt for a shop or wait in a waiting room. LTs Mobile Mechanics brings full-service auto repair right to your driveway. Whether you're in Cedar Hills, working near Progress Ridge, or parked at home on SW Hall Blvd, we're your trusted local mechanic.</p>
 
-          <p>Beaverton drivers trust LTs Mobile Mechanics for reliable service without the hassle. Our owner Tristan Matthew has spent years building this business on one principle: show up on time, do the job right, and treat your vehicle like it's our own. We handle everything from routine oil changes to complex diagnostics, and we're available 24/7 because car trouble doesn't keep business hours.</p>
+          <p>Beaverton drivers trust LTs Mobile Mechanics for reliable service without the hassle. Our owner Tristan has spent years building this business on one principle: show up on time, do the job right, and treat your vehicle like it's our own. We handle everything from routine oil changes to complex diagnostics, and we're open Mon–Sat 8am–7pm so you can schedule a repair when it works for you.</p>
 
           <p>If you're stuck on TV Highway or need brake work near the Beaverton Transit Center, we'll come to you. We service Beaverton's growing communities from Cedar Mills to Fanno Creek, covering neighborhoods where your neighbors trust us. Need a pre-purchase inspection before buying that used truck? Our thorough diagnostic work gives you confidence before you sign papers. Battery dying in the Murray Hill area? We'll get you back on the road fast.</p>
 
@@ -73,7 +73,7 @@ const schema = {
 
     <ArticleCTA
       heading={`Need a Mobile Mechanic in ${city}?`}
-      subheading={`Call LT's Mobile Mechanics. We come to you anywhere in ${city} — any time, day or night.`}
+      subheading={`Call LT's Mobile Mechanics. We come to you anywhere in ${city} — Mon–Sat, 8am–7pm.`}
     />
 
     <RelatedServices heading={`Our Services in ${city}`} />

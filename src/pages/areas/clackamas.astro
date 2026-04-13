@@ -13,7 +13,7 @@ const schema = {
   "@type": "LocalBusiness",
   "name": `LT's Mobile Mechanics - ${city}`,
   "image": `${SITE}/og-image.png`,
-  "description": `Mobile mechanic services in ${city}, Oregon. Professional auto repair, diagnostics, and maintenance delivered to your location. Available 24/7.`,
+  "description": `Mobile mechanic services in ${city}, Oregon. Professional auto repair, diagnostics, and maintenance delivered to your location. Open Mon–Sat, 8am–7pm.`,
   "address": {
     "@type": "PostalAddress",
     "streetAddress": "4041 SW Hall Blvd",
@@ -28,9 +28,9 @@ const schema = {
   "areaServed": { "@type": "City", "name": `${city}, Oregon` },
   "openingHoursSpecification": {
     "@type": "OpeningHoursSpecification",
-    "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],
-    "opens": "00:00",
-    "closes": "23:59"
+    "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"],
+    "opens": "08:00",
+    "closes": "19:00"
   },
   "priceRange": "$$"
 };
@@ -47,7 +47,7 @@ const schema = {
     <section class="article-hero">
       <div class="container">
         <h1>Mobile Mechanic in <em>{city}</em>, Oregon</h1>
-        <p class="hero-subtitle">Professional auto repair that comes to you — 24/7.</p>
+        <p class="hero-subtitle">Professional auto repair that comes to you — Mon–Sat, 8am–7pm.</p>
       </div>
     </section>
 
@@ -71,11 +71,11 @@ const schema = {
           </p>
 
           <p>
-            What sets LTs Mobile Mechanics apart in the Clackamas area is our commitment to quality service at fair prices. We understand that vehicle maintenance is an expense, and we work hard to keep that expense reasonable while maintaining the highest standards of workmanship. Tristan Matthew and his team have built a reputation on integrity, and that's what you get every time you call us. Fair pricing, transparent communication, and professional service are not negotiable.
+            What sets LTs Mobile Mechanics apart in the Clackamas area is our commitment to quality service at fair prices. We understand that vehicle maintenance is an expense, and we work hard to keep that expense reasonable while maintaining the highest standards of workmanship. Tristan and his team have built a reputation on integrity, and that's what you get every time you call us. Fair pricing, transparent communication, and professional service are not negotiable.
           </p>
 
           <p>
-            Emergencies don't follow business hours, which is why LTs Mobile Mechanics operates 24/7. Whether it's a weekend breakdown, a holiday battery issue, or a middle-of-the-night emergency, we're here for you. Call us anytime, and we'll dispatch a professional mechanic to help you get back on the road. That's the kind of reliability and dedication that Clackamas residents deserve.
+            Vehicle problems have a way of surfacing when you don't expect them, which is why LTs Mobile Mechanics operates Mon–Sat with extended hours until 7 PM. Whether it's an early-week breakdown, a battery issue before a weekend trip, or a Saturday morning problem, we're here for you. Call us during business hours and we'll dispatch a professional mechanic to help you get back on the road. That's the kind of reliability and dedication that Clackamas residents deserve.
           </p>
         </div>
       </article>
@@ -83,7 +83,7 @@ const schema = {
 
     <ArticleCTA
       heading={`Need a Mobile Mechanic in ${city}?`}
-      subheading={`Call LT's Mobile Mechanics. We come to you anywhere in ${city} — any time, day or night.`}
+      subheading={`Call LT's Mobile Mechanics. We come to you anywhere in ${city} — Mon–Sat, 8am–7pm.`}
     />
 
     <RelatedServices heading={`Our Services in ${city}`} />
